@@ -1,0 +1,1 @@
+cmd_/armfs/module/cl-smog/clsmog.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /armfs/module/cl-smog/clsmog.ko /armfs/module/cl-smog/clsmog.o /armfs/module/cl-smog/clsmog.mod.o

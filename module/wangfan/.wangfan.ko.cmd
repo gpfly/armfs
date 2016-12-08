@@ -1,0 +1,1 @@
+cmd_/armfs/module/wangfan/wangfan.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /armfs/module/wangfan/wangfan.ko /armfs/module/wangfan/wangfan.o /armfs/module/wangfan/wangfan.mod.o

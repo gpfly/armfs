@@ -1,0 +1,1 @@
+cmd_/armfs/module/ge-bujindianji/ge_bjdj.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /armfs/module/ge-bujindianji/ge_bjdj.ko /armfs/module/ge-bujindianji/ge_bjdj.o /armfs/module/ge-bujindianji/ge_bjdj.mod.o

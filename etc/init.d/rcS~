@@ -1,0 +1,8 @@
+/bin/mount -t proc none /proc/
+/bin/mount -t sysfs none /sys/ 
+/module/insertmod.sh
+mdev -s
+/ge_lcd/lcd_disp &
+mv /dev/video15 /dev/video0
+/bin/mjpg_streamer -i "/mjpg/input_uvc.so" -o "/mjpg/output_http.so -w /www" -o "/mjpg/output_file.so -f /pice -d 15000" &
+/etc/boa/boa&

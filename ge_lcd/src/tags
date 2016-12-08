@@ -1,0 +1,152 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+B	camera.c	/^	unsigned char B ; $/;"	m	struct:_tag_rgb	file:
+BEEPTYPE	beep.c	14;"	d	file:
+BEEP_SET_FREQ	beep.c	15;"	d	file:
+BEEP_STOP	beep.c	16;"	d	file:
+BMP_BPP_OFFSET	mkimage.c	392;"	d	file:
+BMP_SIZE_OFFSET	mkimage.c	391;"	d	file:
+BMP_TORASTER_OFFSET	mkimage.c	390;"	d	file:
+CAMERA_PATH	wangred.c	13;"	d	file:
+CNT	ts.c	/^int CNT = 16;$/;"	v
+ERROR	mkimage.c	3;"	d	file:
+FANOFF	rainapp.c	16;"	d	file:
+FANOFF	smogapp.c	17;"	d	file:
+FANON	rainapp.c	14;"	d	file:
+FANON	smogapp.c	15;"	d	file:
+FANTYPE	rainapp.c	12;"	d	file:
+FANTYPE	smogapp.c	13;"	d	file:
+FANTYPE	wangfan.c	7;"	d	file:
+G	camera.c	/^	unsigned char G ; $/;"	m	struct:_tag_rgb	file:
+IRROFF	wangirr.c	11;"	d	file:
+IRRON	wangirr.c	9;"	d	file:
+IRRTYPE	wangirr.c	7;"	d	file:
+LEDTYPE	wang_led.c	9;"	d	file:
+LEDTYPE	wangled.c	8;"	d	file:
+LED_GET_STAT	wangled.c	12;"	d	file:
+LED_SET_FREQ	wang_led.c	10;"	d	file:
+LED_SET_FREQ	wangled.c	10;"	d	file:
+LED_STOP	wang_led.c	11;"	d	file:
+LED_STOP	wangled.c	11;"	d	file:
+LEN	ts.c	14;"	d	file:
+OFF	wangfan.c	11;"	d	file:
+ON	wangfan.c	9;"	d	file:
+R	camera.c	/^	unsigned char R ;$/;"	m	struct:_tag_rgb	file:
+RGB888toRGB565	camera.c	/^unsigned short RGB888toRGB565(unsigned char red, unsigned char green,$/;"	f
+VEDIO_DEVEICE	camera.c	50;"	d	file:
+VEDIO_HEIGHT	camera.c	48;"	d	file:
+VEDIO_WIDTH	camera.c	47;"	d	file:
+VideoBuffer	camera.c	/^typedef struct VideoBuffer {$/;"	s	file:
+VideoBuffer	camera.c	/^} VideoBuffer;$/;"	t	typeref:struct:VideoBuffer	file:
+__list_add	ge_list.c	/^void __list_add(struct list_head *new,$/;"	f
+_tag_rgb	camera.c	/^typedef struct _tag_rgb {$/;"	s	file:
+add_icon_list	ge_lcd.c	/^int add_icon_list (struct list_head * head, struct win_icon * new)$/;"	f
+background	main.c	/^struct win_screen_image background[] = {$/;"	v	typeref:struct:win_screen_image
+beep_start	beep.c	/^int beep_start(void)$/;"	f
+beep_stop	beep.c	/^int beep_stop(void)$/;"	f
+bitblt	camera.c	/^void bitblt(void *pdst, void *psrc, unsigned long xres, unsigned long yres,int vx, int x0, int y0)$/;"	f
+bjdj_fan	bjdj.c	/^int bjdj_fan()$/;"	f
+bjdj_zheng	bjdj.c	/^int bjdj_zheng()$/;"	f
+bmp_getsize	mkimage.c	/^int bmp_getsize(char *filename,int *x_pic,int *y_pic)$/;"	f
+bmp_load	mkimage.c	/^int bmp_load(char *filename,unsigned char *buffer,int x_pic,int y_pic)$/;"	f
+buffer	camera.c	/^unsigned char *buffer;$/;"	v
+camera	camera.c	/^int camera(struct win_icon * camera_icon, struct s3c_fb_user_window * position) $/;"	f
+camera_icon	main.c	/^struct win_icon camera_icon[] = {$/;"	v	typeref:struct:win_icon
+camera_lcd	main.c	/^int camera_lcd (void)$/;"	f
+check_area	ts.c	/^int check_area (struct win_icon * icon , struct s3c_fb_user_window * pos)$/;"	f
+close_win_n	ge_lcd.c	/^int close_win_n (int fb, int fd, $/;"	f
+col_r	watch_data.c	34;"	d	file:
+col_y	watch_data.c	33;"	d	file:
+color	main.c	/^struct s3c_fb_user_chroma color[] = {$/;"	v	typeref:struct:s3c_fb_user_chroma
+display_fb_n	ge_lcd.c	/^int display_fb_n(void * pwin, const char * pic_buf, $/;"	f
+display_number	ge_lcd.c	/^int display_number (void * pwin, const char * num_buf, $/;"	f
+display_watch	watch_data.c	/^int display_watch (char * pwin, struct s3c_fb_user_window * pos )$/;"	f
+do_resize	mkimage.c	/^static void do_resize(unsigned char *old_buf,int old_x,int old_y, $/;"	f	file:
+envbuffer	mkimage.c	/^	jmp_buf envbuffer;$/;"	m	struct:r_jpeg_error_mgr	file:
+epfd	ts.c	/^int epfd;$/;"	v
+epoll_add	ts.c	/^int epoll_add(int epfd,int fd)$/;"	f
+epoll_read	ts.c	/^int epoll_read(int fd)$/;"	f
+events	ts.c	/^struct epoll_event events[16];$/;"	v	typeref:struct:epoll_event
+fan_close	wangfan.c	/^int fan_close(void)$/;"	f
+fan_open	wangfan.c	/^int fan_open(void)$/;"	f
+fb1_icon	main.c	/^struct win_icon fb1_icon[] = {$/;"	v	typeref:struct:win_icon
+fb_mmap	camera.c	/^void * fb_mmap(int fd, unsigned int screensize) {$/;"	f
+fb_munmap	camera.c	/^int fb_munmap(void *start, size_t length) {$/;"	f
+fb_pixel	camera.c	/^int fb_pixel(void *fbmem, int width, int height, int x, int y,$/;"	f
+fb_stat	camera.c	/^int fb_stat(int fd, unsigned int *width, unsigned int *height, unsigned int *depth) {$/;"	f
+fbdev	camera.c	/^int fbdev;$/;"	v
+fbmem	camera.c	/^unsigned char *fbmem;$/;"	v
+fd	camera.c	/^int fd; \/\/$/;"	v
+fd	main.c	/^int fd[5];$/;"	v
+fun_camera	camera.c	/^void * fun_camera(void * arg)$/;"	f
+get_led_value	wangled.c	/^int get_led_value(void)$/;"	f
+guangai_icon	main.c	/^struct win_icon guangai_icon[] = {$/;"	v	typeref:struct:win_icon
+guangai_lcd	main.c	/^int guangai_lcd (void)$/;"	f
+humidity	humidityapp.c	/^int humidity(void)$/;"	f
+init_ts	ts.c	/^int init_ts(void)$/;"	f
+init_win_0	ge_lcd.c	/^int init_win_0 (void ** p_win) $/;"	f
+init_win_n	ge_lcd.c	/^int init_win_n (int fb, struct s3c_fb_user_window * pos, $/;"	f
+irr_close	wangirr.c	/^int irr_close(void)$/;"	f
+irr_open	wangirr.c	/^int irr_open(void)$/;"	f
+is_bmp	mkimage.c	/^int is_bmp(char *filename)$/;"	f
+is_jpeg	mkimage.c	/^int is_jpeg(char *filename)$/;"	f
+jiance_32x33	number.c	/^unsigned char  jiance_32x33[34][132] = {$/;"	v
+jiance_size	watch_data.c	32;"	d	file:
+jpeg_cb_error_exit	mkimage.c	/^void jpeg_cb_error_exit(j_common_ptr cinfo)$/;"	f
+jpeg_getsize	mkimage.c	/^int jpeg_getsize(char *filename,int *x,int *y)$/;"	f
+jpeg_load	mkimage.c	/^int jpeg_load(char *filename,unsigned char *buffer, int x,int y)$/;"	f
+juanlian_icon	main.c	/^struct win_icon juanlian_icon[] = {$/;"	v	typeref:struct:win_icon
+juanlian_lcd	main.c	/^int juanlian_lcd (void)$/;"	f
+kaiji	main.c	/^struct win_screen_image kaiji[] = {$/;"	v	typeref:struct:win_screen_image
+led_close	wang_led.c	/^int led_close(void)$/;"	f
+led_close	wangled.c	/^static int led_close(int fd)$/;"	f	file:
+led_icon	main.c	/^struct win_icon led_icon[] = {$/;"	v	typeref:struct:win_icon
+led_lcd	main.c	/^int led_lcd (void)$/;"	f
+led_open	wang_led.c	/^int led_open(void)$/;"	f
+led_open	wangled.c	/^static int led_open(int fd, int grade)$/;"	f	file:
+led_set	wang_led.c	/^int led_set(int num)$/;"	f
+led_set	wangled.c	/^int led_set(int grade)$/;"	f
+led_stat	wang_led.c	/^int led_stat (void)$/;"	f
+led_status	wang_led.c	/^static int led_status;$/;"	v	file:
+length	camera.c	/^	size_t length;$/;"	m	struct:VideoBuffer	file:
+list_add_tail	ge_list.c	/^void list_add_tail(struct list_head *new, struct list_head *head)$/;"	f
+load_image	main.c	/^int load_image (void)$/;"	f
+main	main.c	/^int main(int argc, char **argv)$/;"	f
+mk_image_rg888	mkimage.c	/^int mk_image_rg888(char * filename, char ** buf)$/;"	f
+mkimage	mkimage.c	/^void mkimage(unsigned char *rgb_buf,$/;"	f
+null	camera.c	/^	unsigned char null ; $/;"	m	struct:_tag_rgb	file:
+number_16x33	number.c	/^unsigned char  number_16x33[11][66] = {$/;"	v
+number_32x56	number.c	/^unsigned char  number_32x56[11][224] = {$/;"	v
+number_8x16	number.c	/^unsigned char  number_8x16[11][16] = {$/;"	v
+numsize_16x33	watch_data.c	31;"	d	file:
+offset	camera.c	/^	size_t offset;$/;"	m	struct:VideoBuffer	file:
+openclose_32x33	number.c	/^unsigned char  openclose_32x33[2][132] = {$/;"	v
+path	wang_led.c	/^char *path = "\/dev\/wang_led";$/;"	v
+path	wangled.c	/^char *path = "\/dev\/wang_led";$/;"	v
+picture_resize	mkimage.c	/^static void picture_resize(unsigned char **rgb_buf,$/;"	f	file:
+pos_flag	ts.c	/^int pos_flag;$/;"	v
+position	main.c	/^struct s3c_fb_user_window position[] = {$/;"	v	typeref:struct:s3c_fb_user_window
+prgb_buf	camera.c	/^char *prgb_buf = NULL ;$/;"	v
+pub	mkimage.c	/^	struct jpeg_error_mgr pub;$/;"	m	struct:r_jpeg_error_mgr	typeref:struct:r_jpeg_error_mgr::jpeg_error_mgr	file:
+pwin	main.c	/^char *pwin[5] = { NULL };$/;"	v
+r_jpeg_error_mgr	mkimage.c	/^struct r_jpeg_error_mgr$/;"	s	file:
+rain	rainapp.c	/^int rain(void)$/;"	f
+read_ts	ts.c	/^int read_ts(void)$/;"	f
+red_icon	main.c	/^struct win_icon red_icon[] = {$/;"	v	typeref:struct:win_icon
+red_lcd	main.c	/^int red_lcd (void)$/;"	f
+scr1	main.c	/^LIST_HEAD(scr1);$/;"	v
+screensize	camera.c	/^unsigned int screensize;$/;"	v
+show_image	mkimage.c	/^int show_image(char *filename, char ** buf)$/;"	f
+smog	smogapp.c	/^int smog(void)$/;"	f
+start	camera.c	/^	unsigned char *start;$/;"	m	struct:VideoBuffer	file:
+tag_RGB	camera.c	/^} tag_RGB ; $/;"	t	typeref:struct:_tag_rgb	file:
+tongfeng_icon	main.c	/^struct win_icon tongfeng_icon[] = {$/;"	v	typeref:struct:win_icon
+tongfeng_lcd	main.c	/^int tongfeng_lcd (void)$/;"	f
+wangred	wangred.c	/^int wangred(void)$/;"	f
+win_status	ge_lcd.c	/^static int  win_status[5] = {0};$/;"	v	file:
+x_pos	ts.c	/^int x_pos , y_pos;$/;"	v
+y_pos	ts.c	/^int x_pos , y_pos;$/;"	v

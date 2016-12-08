@@ -1,0 +1,3 @@
+/bin/mount -t proc none /proc/
+/bin/mount -t sysfs none /sys/ 
+mdev -s

@@ -1,0 +1,1 @@
+cmd_/armfs/module/cl-rain/rain.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /armfs/module/cl-rain/rain.ko /armfs/module/cl-rain/rain.o /armfs/module/cl-rain/rain.mod.o

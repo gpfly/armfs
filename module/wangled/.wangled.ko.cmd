@@ -1,0 +1,1 @@
+cmd_/armfs/module/wangled/wangled.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /armfs/module/wangled/wangled.ko /armfs/module/wangled/wangled.o /armfs/module/wangled/wangled.mod.o

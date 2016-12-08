@@ -1,0 +1,11 @@
+CC := arm-linux-gcc
+all:
+	$(CC) -o login.cgi login.c -lcgi -Lcgilib/ -Iinclude/
+	make -C led/
+	make -C camera/
+	make -C photo/
+clean:
+	make -C led/ clean
+	make -C camera/ clean
+	make -C photo/ clean
+	rm -f *.cgi

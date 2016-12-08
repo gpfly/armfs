@@ -1,0 +1,1 @@
+cmd_/armfs/module/cl-beep/beep.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /armfs/module/cl-beep/beep.ko /armfs/module/cl-beep/beep.o /armfs/module/cl-beep/beep.mod.o

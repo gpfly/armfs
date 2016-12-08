@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+B	main.c	/^	unsigned char B ; $/;"	m	struct:_tag_rgb	file:
+CC	Makefile	/^CC=arm-linux-gcc$/;"	m
+G	main.c	/^	unsigned char G ; $/;"	m	struct:_tag_rgb	file:
+INCLUDE_PATH	Makefile	/^INCLUDE_PATH=\/usr\/local\/include\/$/;"	m
+LIB_PATH	Makefile	/^LIB_PATH=\/usr\/local\/lib\/$/;"	m
+R	main.c	/^	unsigned char R ;$/;"	m	struct:_tag_rgb	file:
+RGB888toRGB565	main.c	/^unsigned short RGB888toRGB565(unsigned char red, unsigned char green,$/;"	f
+VEDIO_DEVEICE	main.c	44;"	d	file:
+VEDIO_HEIGHT	main.c	43;"	d	file:
+VEDIO_WIDTH	main.c	42;"	d	file:
+VideoBuffer	main.c	/^typedef struct VideoBuffer {$/;"	s	file:
+VideoBuffer	main.c	/^} VideoBuffer;$/;"	t	typeref:struct:VideoBuffer	file:
+_tag_rgb	main.c	/^typedef struct _tag_rgb {$/;"	s	file:
+bitblt	main.c	/^void bitblt(void *pdst, void *psrc, unsigned long xres, unsigned long yres,int vx, int x0, int y0)$/;"	f
+fb_mmap	main.c	/^void * fb_mmap(int fd, unsigned int screensize) {$/;"	f
+fb_munmap	main.c	/^int fb_munmap(void *start, size_t length) {$/;"	f
+fb_pixel	main.c	/^int fb_pixel(void *fbmem, int width, int height, int x, int y,$/;"	f
+fb_stat	main.c	/^int fb_stat(int fd, int *width, int *height, int *depth) {$/;"	f
+length	main.c	/^	size_t length;$/;"	m	struct:VideoBuffer	file:
+main	main.c	/^int main(void) $/;"	f
+null	main.c	/^	unsigned char null ; $/;"	m	struct:_tag_rgb	file:
+offset	main.c	/^	size_t offset;$/;"	m	struct:VideoBuffer	file:
+start	main.c	/^	unsigned char *start;$/;"	m	struct:VideoBuffer	file:
+tag_RGB	main.c	/^} tag_RGB ; $/;"	t	typeref:struct:_tag_rgb	file:

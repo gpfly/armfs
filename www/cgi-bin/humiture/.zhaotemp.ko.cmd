@@ -1,0 +1,1 @@
+cmd_/linux-3.5/drivers/arm_drv/xiangmu/DHT/zhaotemp.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /linux-3.5/drivers/arm_drv/xiangmu/DHT/zhaotemp.ko /linux-3.5/drivers/arm_drv/xiangmu/DHT/zhaotemp.o /linux-3.5/drivers/arm_drv/xiangmu/DHT/zhaotemp.mod.o

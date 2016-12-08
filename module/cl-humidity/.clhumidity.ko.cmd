@@ -1,0 +1,1 @@
+cmd_/armfs/module/cl-humidity/clhumidity.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /armfs/module/cl-humidity/clhumidity.ko /armfs/module/cl-humidity/clhumidity.o /armfs/module/cl-humidity/clhumidity.mod.o

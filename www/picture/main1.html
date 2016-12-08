@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+<title>基于WEB的智能家具控制系统</title>
+<style type="text/css">
+<!--
+.STYLE4 {
+	font-size: 24px;
+	color: #FFFFFF;
+}
+body,td,th {
+}
+body {
+	background-color: #FFFFFF;
+}
+.STYLE11 {
+	font-size: 16px;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	width: 160px;
+}
+.STYLE12 {font-size: 14px; color: #FFFFFF; }
+.STYLE14 {color: #CCCCCC}
+.style15 {
+	color: #FFFF00;
+	font-size: 24px;
+}
+.style16 {color: #FF0000; font-size: 18px; }
+.style19 {color: #FFFFFF; font-weight: bold; }
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+</head>
+
+<body>
+<!-- <table width="80%" height="1024" border="0" align="center" bgcolor="#EBEFF0">
+  <tr>-->
+<!--    <td colspan="2" width="1001" height="175"><img src="sd.jpg" width="996" height="133" align="middle" /></td>
+
+ </tr> -->
+
+  <tr>
+    <td  colspan="2" height="148"><table border="0" align="center" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr background="images/title.jpg">
+        <td height="144" colspan="4" background="images/title.jpg">&nbsp;</td>
+        <td width="168" background="images/title.jpg">&nbsp;</td>
+      </tr> 
+      <tr align="center" valign="middle">
+        <td width="168" rowspan="3" bgcolor="#000000" class="STYLE11">
+		<table>
+			<tr><td align="center"><p><span class="STYLE4">家具控制</span></p></td></tr>
+            <tr><td><form action="/cgi-bin/motor/motor_ccw_cgi.cgi"><input name="1Ctrl2" type="submit" class="STYLE11" id="1Ctrl2" value=" 下拉客厅窗帘  " /></form></td></tr>
+            <tr><td><form action="/cgi-bin/motor/motor_cw_cgi.cgi"><input name="2Ctrl" type="submit" class="STYLE11" id="2Ctrl" value="上拉客厅窗帘" /></form></td></tr>
+            <tr><td><form action="/cgi-bin/fan/fan_cgi.cgi"><input name="3Ctrl" type="submit" class="STYLE11" id="3Ctrl" value="打开小换气扇 " /></form></td></tr>
+            <tr><td><form action="/cgi-bin/fan/fanclose_cgi.cgi"><input name="4Ctrl" type="submit" class="STYLE11" id="3Ctrl2" value="关闭小换气扇 " /></form></td></tr>
+			<tr><td><form action="/cgi-bin/lamp/lamp_cgi.cgi"><input name="4Ctrl" type="submit" class="STYLE11" id="3Ctrl2" value="打开卧室台灯 " /></form></td></tr>
+			<tr><td><form action="/cgi-bin/lamp/lampclose_cgi.cgi">
+			  <input name="4Ctrl2" type="submit" class="STYLE11" id="4Ctrl" value="关闭卧室台灯 " />
+			</form></td></tr>
+        </table>		</td>
+        <td width="15" rowspan="3">&nbsp;</td>
+        <td width="507" height="13">&nbsp;</td>
+        <td width="15" rowspan="3">&nbsp;</td>
+        <td rowspan="3" bgcolor="#000000" class="STYLE11">
+		<table>
+			<tr><td align="center"><p><span class="STYLE4">功能选择</span></p></td></tr>
+            <tr><td><form action="/cgi-bin/pwm/pwm_cgi.cgi"><input name="6Ctrl" type="submit" class="STYLE11" id="6Ctrl" value="开启报警器" />
+            </form></td></tr>
+            <tr><td><form action="/cgi-bin/pwm/pwmclose_cgi.cgi"><input name="8Ctrl" type="submit" class="STYLE11" id="8Ctrl" value="关闭报警器" />
+            </form></td></tr>
+            <tr><td><form action="/cgi-bin/photo/photo/photo1_cgi.cgi"><input name="7Ctrl" type="submit" class="STYLE11" id="7Ctrl2" value=" 开启拍照 " />
+            </form></td></tr>
+            <tr><td><form action="/cgi-bin/led/ledclose_cgi.cgi"><input name="9Ctrl2" type="submit" class="STYLE11" id="9Ctrl2" value="关闭报警灯 " />
+            </form></td></tr>
+			<tr><td><form action="/cgi-bin/camera/camera_cgi.cgi"><input name="9Ctrl2" type="submit" class="STYLE11" id="9Ctrl2" value="开启摄像头" /></form></td></tr>
+			<tr><td><form action="/cgi-bin/camera/cameraclose_cgi.cgi"><input name="9Ctrl2" type="submit" class="STYLE11" id="9Ctrl2" value="关闭摄像头 " />
+			</form></td></tr>
+      </table>	  </td>
+      <tr align="center" valign="middle">
+      
+           <td width="347"><img src="fairyland.jpg" width="260" height="400" border="3" align="middle" /></td>
+     
+        <td height="400">
+                 <img src="http://192.168.0.168:8080/?action=stream" width="400"height="400"></img>
+				<!--<img src="http://xulijun.3322.org:8080/?action=stream" />-->
+				</td>
+      </tr>
+      <tr align="center" valign="middle">
+        <td height="13">&nbsp;</td>
+      <tr align="center" valign="middle">
+        	
+      </tr>
+
+    </table></td>
+  </tr>
+  <tr>
+    <td height="168">&nbsp;</td>
+  </tr>
+
+</table>
+</body>
+</html>
+

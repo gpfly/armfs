@@ -1,0 +1,1 @@
+cmd_/armfs/module/wangirrigate/wangirrigate.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /armfs/module/wangirrigate/wangirrigate.ko /armfs/module/wangirrigate/wangirrigate.o /armfs/module/wangirrigate/wangirrigate.mod.o

@@ -1,0 +1,1 @@
+cmd_/armfs/module/zwdht/zhaotemp.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /armfs/module/zwdht/zhaotemp.ko /armfs/module/zwdht/zhaotemp.o /armfs/module/zwdht/zhaotemp.mod.o

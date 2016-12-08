@@ -1,0 +1,130 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+B	src/camera/main.c	/^	unsigned char B ; $/;"	m	struct:_tag_rgb	file:
+BMP_BPP_OFFSET	src/mkimage.c	392;"	d	file:
+BMP_SIZE_OFFSET	src/mkimage.c	391;"	d	file:
+BMP_TORASTER_OFFSET	src/mkimage.c	390;"	d	file:
+BPP	include/fb.h	7;"	d
+CC	Makefile	/^CC			:= $(CROSS_COMPILE)gcc$/;"	m
+CC	src/camera/Makefile	/^CC=arm-linux-gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS			:= -I.\/include -I\/usr\/include -Wall$/;"	m
+CNT	app.c	13;"	d	file:
+CROSS_COMPILE	Makefile	/^CROSS_COMPILE	:= arm-linux-$/;"	m
+ERROR	src/mkimage.c	3;"	d	file:
+FILENAME_SIZE	include/ge_lcd.h	17;"	d
+G	src/camera/main.c	/^	unsigned char G ; $/;"	m	struct:_tag_rgb	file:
+INCLUDE_PATH	src/camera/Makefile	/^INCLUDE_PATH=\/usr\/local\/include\/$/;"	m
+INCLUDE_PATH1	src/camera/Makefile	/^INCLUDE_PATH1=\/armfs\/app\/include\/$/;"	m
+LD	Makefile	/^LD			:= $(CROSS_COMPILE)ld$/;"	m
+LEDTYPE	ioctl.h	6;"	d
+LED_GET_STAT	ioctl.h	12;"	d
+LED_OFF	ioctl.h	9;"	d
+LED_OFF_ALL	ioctl.h	11;"	d
+LED_ON	ioctl.h	8;"	d
+LED_ON_ALL	ioctl.h	10;"	d
+LIB_PATH	src/camera/Makefile	/^LIB_PATH=\/usr\/local\/lib\/$/;"	m
+LIST_HEAD	include/ge_list.h	10;"	d
+MILLET_LED_H_	ioctl.h	2;"	d
+NM	Makefile	/^NM			:= $(CROSS_COMPILE)nm$/;"	m
+OBJCOPY	Makefile	/^OBJCOPY			:= $(CROSS_COMPILE)objcopy$/;"	m
+OBJDUMP	Makefile	/^OBJDUMP			:= $(CROSS_COMPILE)objdump$/;"	m
+OBJS	Makefile	/^OBJS			:= .\/src\/main.o  .\/src\/ge_lcd.o$/;"	m
+R	src/camera/main.c	/^	unsigned char R ;$/;"	m	struct:_tag_rgb	file:
+RGB888toRGB565	src/camera/main.c	/^unsigned short RGB888toRGB565(unsigned char red, unsigned char green,$/;"	f
+S3CFB_WIN_POSITION	include/ge_lcd.h	27;"	d
+S3CFB_WIN_SET_CHROMA	include/ge_lcd.h	30;"	d
+SZ	display_pics.c	14;"	d	file:
+SZ	include/ge_lcd.h	14;"	d
+Sys	Makefile	/^Sys			:= System.map$/;"	m
+TARGET	Makefile	/^TARGET			:= main$/;"	m
+VEDIO_DEVEICE	src/camera/main.c	49;"	d	file:
+VEDIO_HEIGHT	src/camera/main.c	46;"	d	file:
+VEDIO_WIDTH	src/camera/main.c	45;"	d	file:
+VideoBuffer	src/camera/main.c	/^typedef struct VideoBuffer {$/;"	s	file:
+VideoBuffer	src/camera/main.c	/^} VideoBuffer;$/;"	t	typeref:struct:VideoBuffer	file:
+X	include/fb.h	5;"	d
+Y	include/fb.h	6;"	d
+_GE_LCD_H	include/ge_lcd.h	9;"	d
+_GE_LIST_H	include/ge_list.h	8;"	d
+__FB_DISPLAY_H__	include/fb.h	3;"	d
+__list_add	src/ge_list.c	/^void __list_add(struct list_head *new,$/;"	f
+_tag_rgb	src/camera/main.c	/^typedef struct _tag_rgb {$/;"	s	file:
+add_icon	src/ge_lcd.c	/^int add_icon (struct list_head * head, struct win_icon * new)$/;"	f
+arry_size	include/ge_lcd.h	21;"	d
+back_buf	include/ge_lcd.h	/^        char *  back_buf;$/;"	m	struct:win_back
+background	src/main.c	/^struct win_back background[] = {$/;"	v	typeref:struct:win_back
+bitblt	src/camera/main.c	/^void bitblt(void *pdst, void *psrc, unsigned long xres, unsigned long yres,int vx, int x0, int y0)$/;"	f
+blue	include/ge_lcd.h	/^	unsigned char	blue;$/;"	m	struct:s3c_fb_user_chroma
+bmp_getsize	src/mkimage.c	/^int bmp_getsize(char *filename,int *x_pic,int *y_pic)$/;"	f
+bmp_load	src/mkimage.c	/^int bmp_load(char *filename,unsigned char *buffer,int x_pic,int y_pic)$/;"	f
+close_win_n	src/ge_lcd.c	/^int close_win_n (int fb, int fd, $/;"	f
+color	src/main.c	/^struct s3c_fb_user_chroma color[] = {$/;"	v	typeref:struct:s3c_fb_user_chroma
+container_of	include/ge_list.h	26;"	d
+display_fb_n	src/ge_lcd.c	/^int display_fb_n(void * pwin, const char * pic_buf, $/;"	f
+display_number	src/ge_lcd.c	/^int display_number (void * pwin, const char * num_buf, $/;"	f
+do_resize	src/mkimage.c	/^static void do_resize(unsigned char *old_buf,int old_x,int old_y, $/;"	f	file:
+enabled	include/ge_lcd.h	/^	int		enabled;$/;"	m	struct:s3c_fb_user_chroma
+envbuffer	src/mkimage.c	/^	jmp_buf envbuffer;$/;"	m	struct:r_jpeg_error_mgr	file:
+fb1_icon	src/main.c	/^struct win_icon fb1_icon[] = {$/;"	v	typeref:struct:win_icon
+fb_mmap	src/camera/main.c	/^void * fb_mmap(int fd, unsigned int screensize) {$/;"	f
+fb_munmap	src/camera/main.c	/^int fb_munmap(void *start, size_t length) {$/;"	f
+fb_pixel	src/camera/main.c	/^int fb_pixel(void *fbmem, int width, int height, int x, int y,$/;"	f
+fb_stat	src/camera/main.c	/^int fb_stat(int fd, int *width, int *height, int *depth) {$/;"	f
+fd	src/main.c	/^int fd[5];$/;"	v
+file_name	include/ge_lcd.h	/^        char    file_name[FILENAME_SIZE];$/;"	m	struct:win_back
+file_name	include/ge_lcd.h	/^        char    file_name[FILENAME_SIZE];$/;"	m	struct:win_icon
+green	include/ge_lcd.h	/^	unsigned char	green;$/;"	m	struct:s3c_fb_user_chroma
+init_win_0	src/ge_lcd.c	/^int init_win_0 (void ** p_win) $/;"	f
+init_win_n	src/ge_lcd.c	/^int init_win_n (int fb, struct s3c_fb_user_window * pos, $/;"	f
+is_bmp	src/mkimage.c	/^int is_bmp(char *filename)$/;"	f
+is_jpeg	src/mkimage.c	/^int is_jpeg(char *filename)$/;"	f
+jpeg_cb_error_exit	src/mkimage.c	/^void jpeg_cb_error_exit(j_common_ptr cinfo)$/;"	f
+jpeg_getsize	src/mkimage.c	/^int jpeg_getsize(char *filename,int *x,int *y)$/;"	f
+jpeg_load	src/mkimage.c	/^int jpeg_load(char *filename,unsigned char *buffer, int x,int y)$/;"	f
+length	src/camera/main.c	/^	size_t length;$/;"	m	struct:VideoBuffer	file:
+list	include/ge_lcd.h	/^        struct list_head        list;$/;"	m	struct:win_icon	typeref:struct:win_icon::list_head
+list_add_tail	src/ge_list.c	/^void list_add_tail(struct list_head *new, struct list_head *head)$/;"	f
+list_for_each	include/ge_list.h	13;"	d
+list_for_each_safe	include/ge_list.h	20;"	d
+list_head	include/ge_list.h	/^struct list_head {$/;"	s
+main	app.c	/^int main(int argc, char **argv)$/;"	f
+main	display_pics.c	/^int main(int argc, char **argv)$/;"	f
+main	src/camera/main.c	/^int main(int argc, char *argv[]) $/;"	f
+main	src/main.c	/^int main(int argc, char **argv)$/;"	f
+mk_image_rg888	src/mkimage.c	/^int mk_image_rg888(char * filename, char ** buf)$/;"	f
+mkimage	src/mkimage.c	/^void mkimage(unsigned char *rgb_buf,$/;"	f
+next	include/ge_list.h	/^	struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::list_head
+null	src/camera/main.c	/^	unsigned char null ; $/;"	m	struct:_tag_rgb	file:
+number_32x56	src/number.c	/^unsigned char  number_32x56[11][224] = {$/;"	v
+number_8x16	src/number.c	/^unsigned char  number_8x16[11][16] = {$/;"	v
+offset	src/camera/main.c	/^	size_t offset;$/;"	m	struct:VideoBuffer	file:
+offset_userof	include/ge_list.h	24;"	d
+pic_buf	include/ge_lcd.h	/^        char *  pic_buf;$/;"	m	struct:win_icon
+picture_resize	src/mkimage.c	/^static void picture_resize(unsigned char **rgb_buf,$/;"	f	file:
+position	src/main.c	/^struct s3c_fb_user_window position[] = {$/;"	v	typeref:struct:s3c_fb_user_window
+prev	include/ge_list.h	/^	struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::
+pub	src/mkimage.c	/^	struct jpeg_error_mgr pub;$/;"	m	struct:r_jpeg_error_mgr	typeref:struct:r_jpeg_error_mgr::jpeg_error_mgr	file:
+pwin	src/main.c	/^char *pwin[5] = { NULL };$/;"	v
+r_jpeg_error_mgr	src/mkimage.c	/^struct r_jpeg_error_mgr$/;"	s	file:
+red	include/ge_lcd.h	/^	unsigned char	red;$/;"	m	struct:s3c_fb_user_chroma
+request_win_n	include/ge_lcd.h	19;"	d
+s3c_fb_user_chroma	include/ge_lcd.h	/^struct s3c_fb_user_chroma {$/;"	s
+s3c_fb_user_window	include/ge_lcd.h	/^struct s3c_fb_user_window {$/;"	s
+scr1	src/main.c	/^LIST_HEAD(scr1);$/;"	v
+show_image	src/mkimage.c	/^int show_image(char *filename, char ** buf)$/;"	f
+start	src/camera/main.c	/^	unsigned char *start;$/;"	m	struct:VideoBuffer	file:
+tag_RGB	src/camera/main.c	/^} tag_RGB ; $/;"	t	typeref:struct:_tag_rgb	file:
+usage	app.c	/^void usage(const char *str)$/;"	f
+usage	display_pics.c	/^void usage(const char *str)$/;"	f
+user_u32	include/ge_lcd.h	/^typedef unsigned int user_u32;$/;"	t
+win_back	include/ge_lcd.h	/^struct win_back {$/;"	s
+win_icon	include/ge_lcd.h	/^struct win_icon {$/;"	s
+win_status	src/ge_lcd.c	/^static int  win_status[5] = {0};$/;"	v	file:
+x	include/ge_lcd.h	/^	int x;$/;"	m	struct:s3c_fb_user_window
+x_offs	include/ge_lcd.h	/^        user_u32        x_offs;$/;"	m	struct:win_icon
+y	include/ge_lcd.h	/^	int y;$/;"	m	struct:s3c_fb_user_window
+y_offs	include/ge_lcd.h	/^        user_u32        y_offs;$/;"	m	struct:win_icon

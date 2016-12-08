@@ -1,0 +1,22 @@
+rmmod beep
+rmmod clhumidity
+rmmod rain
+rmmod clsmog
+rmmod ge_bjdj
+rmmod wangfan
+rmmod wangirrigate
+rmmod wangred
+rmmod wangled
+rmmod zhaotemp
+rm /dev/bujdj /dev/wang* /dev/chang* /dev/dht
+insmod /module/cl-beep/beep.ko
+insmod /module/cl-humidity/clhumidity.ko
+insmod /module/cl-rain/rain.ko
+insmod /module/cl-smog/clsmog.ko
+insmod /module/ge-bujindianji/ge_bjdj.ko
+insmod /module/wangfan/wangfan.ko
+insmod /module/wangirrigate/wangirrigate.ko
+insmod /module/wangred/wangred.ko
+insmod /module/wangled/wangled.ko
+insmod /module/zw_dht/zhaotemp.ko
+mdev -s
