@@ -1,4 +1,0 @@
-hello world;
-hello mount;
-hello mount;
-git config --global user.name "
