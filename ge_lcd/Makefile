@@ -16,11 +16,11 @@ OBJS 			+= ./src/beep.o ./src/smogapp.o \
 
 OBJS 			+= ./src/bjdj.o
 
-CROSS_COMPILE		:= arm-linux-
-CC			:= $(CROSS_COMPILE)gcc
+CROSS_COMPILE	:= arm-linux-
+CC				:= $(CROSS_COMPILE)gcc
 OBJCOPY			:= $(CROSS_COMPILE)objcopy
-LD			:= $(CROSS_COMPILE)ld
-NM			:= $(CROSS_COMPILE)nm
+LD				:= $(CROSS_COMPILE)ld
+NM				:= $(CROSS_COMPILE)nm
 OBJDUMP			:= $(CROSS_COMPILE)objdump
 
 CFLAGS			:= -I./include -Wall
