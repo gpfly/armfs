@@ -1,5 +1,5 @@
 TARGET			:= lcd_disp
-Sys			:= System.map
+Sys				:= System.map
 
 OBJS			:= ./src/main.o  ./src/ge_lcd.o
 OBJS 			+= ./src/ge_list.o
