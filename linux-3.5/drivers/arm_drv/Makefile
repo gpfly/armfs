@@ -1,0 +1,11 @@
+obj-$(CONFIG_MILLET_FT5206)			+= ts/
+obj-y			+= cl-beep/
+obj-y			+= cl-humidity/
+obj-y			+= cl-rain/
+obj-y			+= cl-smog/
+obj-y			+= bujindianji/
+obj-y			+= wangfan/
+obj-y			+= wangirrigate/
+obj-y			+= wangled/
+obj-y			+= wangred/
+obj-y			+= zw_dht/

@@ -1,0 +1,52 @@
+
+
+中断的共享：
+
+	某一个中断的触发，需要按顺序做两种及以上的事情。
+多个中断处理函数共享同一个中断。
+
+	注册中断时，中断的标记必须用到IRQF_SHARED;同时注册
+中断时的第五个参数不能为NULL。
+
+	
+中断的上下半部：
+
+实现机制一:
+
+tasklet机制
+
+	下半部的任务对应一个如下类型的一个对象。
+
+	struct tasklet_struct
+	{
+		struct tasklet_struct *next;
+		unsigned long state;
+		atomic_t count;
+		void (*func)(unsigned long); //下半部的任务函数
+		unsigned long data;		//任务函数的点心
+	};
+
+
+	//struct tasklet_struct task;
+
+初始化:
+	//tasklet_init(&task, do_bh, data);
+
+	void tasklet_init(
+		struct tasklet_struct *t,
+		void (*func)(unsigned long), 
+		unsigned long data
+	);
+
+中断上半部将下半部的任务交给调度器调度:
+
+	tasklet_schedule(&task);
+
+
+驱动模块的出口:
+
+	void tasklet_kill(struct tasklet_struct *t)
+	void tasklet_kill_immediate(struct tasklet_struct *t, unsigned int cpu)
+
+
+

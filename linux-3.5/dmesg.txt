@@ -1,0 +1,612 @@
+[    0.000000] Booting Linux on physical CPU 0
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Linux version 3.5.0-FriendlyARM (root@localhost.localdomain) (gcc version 4.5.1 (ctng-1.8.1-FA) ) #9 SMP PREEMPT Mon Oct 10 14:31:45 CST 2016
+[    0.000000] CPU: ARMv7 Processor [413fc090] revision 0 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine: TINY4412
+[    0.000000] TINY4412: S70 selected
+[    0.000000] cma: CMA: reserved 32 MiB at 6d800000
+[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+[    0.000000] CPU EXYNOS4412 (id 0xe4412011)
+[    0.000000] exynos4_init_clocks: initializing clocks
+[    0.000000] S3C24XX Clocks, Copyright 2004 Simtec Electronics
+[    0.000000] s3c_register_clksrc: clock armclk has no registers set
+[    0.000000] s3c_register_clksrc: clock audiocdclk has no registers set
+[    0.000000] audiocdclk: no parent clock specified
+[    0.000000] exynos4_setup_clocks: registering clocks
+[    0.000000] exynos4_setup_clocks: xtal is 24000000
+[    0.000000] EXYNOS4: PLL settings, A=1400000000, M=800000000, E=96000000 V=108000000
+[    0.000000] EXYNOS4: ARMCLK=1400000000, DMC=400000000, ACLK200=160000000
+[    0.000000] ACLK100=100000000, ACLK160=160000000, ACLK133=133333333
+[    0.000000] sclk_pwm: source is ext_xtal (0), rate is 24000000
+[    0.000000] sclk_csis: source is xusbxti (1), rate is 1500000
+[    0.000000] sclk_csis: source is xusbxti (1), rate is 1500000
+[    0.000000] sclk_cam0: source is xusbxti (1), rate is 1500000
+[    0.000000] sclk_cam1: source is xusbxti (1), rate is 1500000
+[    0.000000] sclk_fimc: source is xusbxti (1), rate is 1500000
+[    0.000000] sclk_fimc: source is xusbxti (1), rate is 1500000
+[    0.000000] sclk_fimc: source is xusbxti (1), rate is 1500000
+[    0.000000] sclk_fimc: source is xusbxti (1), rate is 1500000
+[    0.000000] sclk_fimd: source is xusbxti (1), rate is 1500000
+[    0.000000] sclk_jpeg: source is mout_jpeg0 (0), rate is 50000000
+[    0.000000] sclk_fimg2d: source is mout_g2d0 (0), rate is 200000000
+[    0.000000] sclk_g3d: source is mout_g3d0 (0), rate is 50000000
+[    0.000000] sclk_mfc: source is mout_mfc0 (0), rate is 50000000
+[    0.000000] On node 0 totalpages: 253696
+[    0.000000] free_area_init_node: node 0, pgdat c0953240, node_mem_map c09f8000
+[    0.000000]   Normal zone: 1710 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 184658 pages, LIFO batch:31
+[    0.000000]   HighMem zone: 592 pages used for memmap
+[    0.000000]   HighMem zone: 66736 pages, LIFO batch:15
+[    0.000000] PERCPU: Embedded 8 pages/cpu @c1301000 s11712 r8192 d12864 u32768
+[    0.000000] pcpu-alloc: s11712 r8192 d12864 u32768 alloc=8*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 251394
+[    0.000000] Kernel command line: root=/dev/mmcblk0p3 console=ttySAC0,115200 lcd=S70
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 384MB 607MB = 991MB total
+[    0.000000] Memory: 961532k/961532k available, 86020k reserved, 269312K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff000000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc089d0bc   (8789 kB)
+[    0.000000]       .init : 0xc089e000 - 0xc08d3dc0   ( 216 kB)
+[    0.000000]       .data : 0xc08d4000 - 0xc0986e50   ( 716 kB)
+[    0.000000]        .bss : 0xc0986e74 - 0xc09f7af0   ( 452 kB)
+[    0.000000] SLUB: Genslabs=11, HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:549
+[    0.000000] sched_clock: 32 bits at 200 Hz, resolution 5000000ns, wraps every 4294967291ms
+[    0.000000] Console: colour dummy device 80x30
+[    0.040000] Calibrating delay loop... 2795.11 BogoMIPS (lpj=6987776)
+[    0.045000] pid_max: default: 32768 minimum: 301
+[    0.045000] Mount-cache hash table entries: 512
+[    0.045000] Initializing cgroup subsys debug
+[    0.045000] Initializing cgroup subsys cpuacct
+[    0.045000] Initializing cgroup subsys freezer
+[    0.045000] CPU: Testing write buffer coherency: ok
+[    0.045000] CPU0: thread -1, cpu 0, socket 10, mpidr 80000a00
+[    0.045000] hw perfevents: enabled with ARMv7 Cortex-A9 PMU driver, 7 counters available
+[    0.045000] Setting up static identity map for 0x40616e78 - 0x40616ed0
+[    0.045000] L310 cache controller enabled
+[    0.045000] l2x0: 16 ways, CACHE_ID 0x4100c4c8, AUX_CTRL 0x7e470001, Cache size: 1048576 B
+[    0.100000] CPU1: thread -1, cpu 1, socket 10, mpidr 80000a01
+[    0.140000] CPU2: thread -1, cpu 2, socket 10, mpidr 80000a02
+[    0.180000] CPU3: thread -1, cpu 3, socket 10, mpidr 80000a03
+[    0.180000] Brought up 4 CPUs
+[    0.180000] SMP: Total of 4 processors activated (11180.44 BogoMIPS).
+[    0.180000] NET: Registered protocol family 16
+[    0.195000] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.195000] HW revision: 5
+[    0.195000] samsung-adc-v3: no platform data supplied
+[    0.200000] hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+[    0.200000] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.200000] S3C Power Management, Copyright 2004 Simtec Electronics
+[    0.200000] EXYNOS4x12 PMU Initialize
+[    0.200000] EXYNOS: Initializing architecture
+[    0.200000] s3c24xx-pwm s3c24xx-pwm.1: tin at 100000000, tdiv at 100000000, tin=divclk, base 8
+[    0.200000] s3c24xx-pwm s3c24xx-pwm.0: tin at 100000000, tdiv at 100000000, tin=divclk, base 0
+[    0.205000] bio: create slab <bio-0> at 0
+[    0.205000] exynos_ion_heap_create: 34
+[    0.205000] exynos_ion_heap_create: 34
+[    0.205000] exynos_ion_heap_create: 34
+[    0.205000] SCSI subsystem initialized
+[    0.205000] usbcore: registered new interface driver usbfs
+[    0.205000] usbcore: registered new interface driver hub
+[    0.205000] usbcore: registered new device driver usb
+[    0.205000] s3c-i2c exynos4412-i2c.1: cannot get clock
+[    0.205000] s3c-i2c: probe of exynos4412-i2c.1 failed with error -2
+[    0.205000] s3c-i2c s3c2440-hdmiphy-i2c: slave address 0x10
+[    0.205000] s3c-i2c s3c2440-hdmiphy-i2c: bus frequency set to 390 KHz
+[    0.205000] s3c-i2c s3c2440-hdmiphy-i2c: i2c-8: S3C I2C adapter
+[    0.205000] Linux media interface: v0.10
+[    0.205000] Linux video capture interface: v2.00
+[    0.205000] Advanced Linux Sound Architecture Driver Version 1.0.25.
+[    0.205000] Bluetooth: Core ver 2.16
+[    0.205000] NET: Registered protocol family 31
+[    0.205000] Bluetooth: HCI device and connection manager initialized
+[    0.205000] Bluetooth: HCI socket layer initialized
+[    0.205000] Bluetooth: L2CAP socket layer initialized
+[    0.205000] Bluetooth: SCO socket layer initialized
+[    0.205000] Switching to clocksource mct-frc
+[    0.210000] NET: Registered protocol family 2
+[    0.210000] IP route cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.210000] TCP established hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.210000] TCP bind hash table entries: 65536 (order: 7, 786432 bytes)
+[    0.215000] TCP: Hash tables configured (established 131072 bind 65536)
+[    0.215000] TCP: reno registered
+[    0.215000] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.215000] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.215000] NET: Registered protocol family 1
+[    0.215000] RPC: Registered named UNIX socket transport module.
+[    0.215000] RPC: Registered udp transport module.
+[    0.215000] RPC: Registered tcp transport module.
+[    0.215000] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.215000] NetWinder Floating Point Emulator V0.97 (double precision)
+[    0.215000] Attached IOMMU controller to exynos4-fimc.0 device.
+[    0.215000] Attached IOMMU controller to exynos4-fimc.1 device.
+[    0.215000] Attached IOMMU controller to exynos4-fimc.2 device.
+[    0.215000] Attached IOMMU controller to exynos4-fimc.3 device.
+[    0.215000] Attached IOMMU controller to s5p-mfc-l device.
+[    0.215000] Attached IOMMU controller to s5p-mfc-r device.
+[    0.215000] Attached IOMMU controller to s5p-mixer device.
+[    0.215000] Attached IOMMU controller to s5p-fimg2d device.
+[    0.215000] Attached IOMMU controller to s5p-jpeg.0 device.
+[    0.215000] platform exynos-fimc-lite.0: No SYSMMU found
+[    0.215000] Attached IOMMU controller to exynos-fimc-lite.0 device.
+[    0.215000] platform exynos-fimc-lite.1: No SYSMMU found
+[    0.215000] Attached IOMMU controller to exynos-fimc-lite.1 device.
+[    0.215000] s3c-adc samsung-adc-v4: attached adc driver
+[    0.215000] Failed to declare coherent memory for MFC device (0 bytes at 0x43000000)
+[    0.215000] highmem bounce pool size: 64 pages
+[    0.220000] NFS: Registering the id_resolver key type
+[    0.220000] Key type id_resolver registered
+[    0.220000] NTFS driver 2.1.30 [Flags: R/W].
+[    0.220000] fuse init (API version 7.19)
+[    0.220000] msgmni has been set to 1415
+[    0.220000] io scheduler noop registered
+[    0.220000] io scheduler deadline registered
+[    0.220000] io scheduler cfq registered (default)
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.220000] ---------- spring summer --------
+[    0.235000] s3c-fb exynos4-fb.0: window 0: fb 
+[    0.250000] s3c-fb exynos4-fb.0: window 1: fb 
+[    0.265000] s3c-fb exynos4-fb.0: window 2: fb 
+[    0.275000] s3c-fb exynos4-fb.0: window 3: fb 
+[    0.290000] s3c-fb exynos4-fb.0: window 4: fb 
+[    0.290000] Start display and show logo
+[    0.295000] dma-pl330 dma-pl330.0: Loaded driver for PL330 DMAC-267056
+[    0.295000] dma-pl330 dma-pl330.0: 	DBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32
+[    0.295000] dma-pl330 dma-pl330.1: Loaded driver for PL330 DMAC-267056
+[    0.295000] dma-pl330 dma-pl330.1: 	DBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32
+[    0.300000] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    0.300000] exynos4210-uart.0: ttySAC0 at MMIO 0x13800000 (irq = 84) is a S3C6400/10
+[    1.215000] console [ttySAC0] enabled
+[    1.220000] exynos4210-uart.1: ttySAC1 at MMIO 0x13810000 (irq = 85) is a S3C6400/10
+[    1.225000] exynos4210-uart.2: ttySAC2 at MMIO 0x13820000 (irq = 86) is a S3C6400/10
+[    1.235000] exynos4210-uart.3: ttySAC3 at MMIO 0x13830000 (irq = 87) is a S3C6400/10
+[    1.245000] backlight	initialized
+[    1.250000] Mali: init_mali_clock mali_clock c0900024 at 440 MHz
+[    1.250000] Mali: Mali device driver loaded
+[    1.260000] brd: module loaded
+[    1.260000] loop: module loaded
+[    1.260000] tun: Universal TUN/TAP device driver, 1.6
+[    1.265000] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    1.275000] PPP generic driver version 2.4.2
+[    1.280000] PPP BSD Compression module registered
+[    1.280000] PPP Deflate Compression module registered
+[    1.290000] PPP MPPE Compression module registered
+[    1.290000] NET: Registered protocol family 24
+[    1.295000] pegasus: v0.6.14 (2006/09/27), Pegasus/Pegasus II USB Ethernet driver
+[    1.305000] usbcore: registered new interface driver pegasus
+[    1.310000] usbcore: registered new interface driver asix
+[    1.315000] usbcore: registered new interface driver cdc_ether
+[    1.320000] usbcore: registered new interface driver dm9601
+[    1.325000] usbcore: registered new interface driver dm9620
+[    1.330000] usbcore: registered new interface driver net1080
+[    1.340000] usbcore: registered new interface driver cdc_subset
+[    1.345000] usbcore: registered new interface driver zaurus
+[    1.350000] usbcore: registered new interface driver cdc_ncm
+[    1.355000] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.360000] s5p-ehci s5p-ehci: S5P EHCI Host Controller
+[    1.365000] s5p-ehci s5p-ehci: new USB bus registered, assigned bus number 1
+[    1.375000] s5p-ehci s5p-ehci: irq 102, io mem 0x12580000
+[    1.390000] s5p-ehci s5p-ehci: USB 0.0 started, EHCI 1.00
+[    1.390000] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.390000] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.400000] usb usb1: Product: S5P EHCI Host Controller
+[    1.405000] usb usb1: Manufacturer: Linux 3.5.0-FriendlyARM ehci_hcd
+[    1.410000] usb usb1: SerialNumber: s5p-ehci
+[    1.415000] hub 1-0:1.0: USB hub found
+[    1.420000] hub 1-0:1.0: 3 ports detected
+[    1.420000] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.430000] exynos-ohci exynos-ohci: PHY already ON
+[    1.435000] exynos-ohci exynos-ohci: EXYNOS OHCI Host Controller
+[    1.440000] exynos-ohci exynos-ohci: new USB bus registered, assigned bus number 2
+[    1.445000] exynos-ohci exynos-ohci: irq 102, io mem 0x12590000
+[    1.505000] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+[    1.505000] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.505000] usb usb2: Product: EXYNOS OHCI Host Controller
+[    1.505000] usb usb2: Manufacturer: Linux 3.5.0-FriendlyARM ohci_hcd
+[    1.510000] usb usb2: SerialNumber: exynos-ohci
+[    1.515000] hub 2-0:1.0: USB hub found
+[    1.520000] hub 2-0:1.0: 3 ports detected
+[    1.520000] Initializing USB Mass Storage driver...
+[    1.525000] usbcore: registered new interface driver usb-storage
+[    1.535000] USB Mass Storage support registered.
+[    1.540000] usbcore: registered new interface driver usbserial
+[    1.545000] usbcore: registered new interface driver usbserial_generic
+[    1.550000] USB Serial support registered for generic
+[    1.555000] usbserial: USB Serial Driver core
+[    1.560000] usbcore: registered new interface driver aircable
+[    1.565000] USB Serial support registered for aircable
+[    1.570000] usbcore: registered new interface driver ark3116
+[    1.575000] USB Serial support registered for ark3116
+[    1.580000] usbcore: registered new interface driver belkin_sa
+[    1.585000] USB Serial support registered for Belkin / Peracom / GoHubs USB Serial Adapter
+[    1.595000] usbcore: registered new interface driver ch341
+[    1.600000] USB Serial support registered for ch341-uart
+[    1.605000] usbcore: registered new interface driver cp210x
+[    1.610000] USB Serial support registered for cp210x
+[    1.615000] usbcore: registered new interface driver cyberjack
+[    1.620000] USB Serial support registered for Reiner SCT Cyberjack USB card reader
+[    1.630000] usbcore: registered new interface driver cypress_m8
+[    1.635000] USB Serial support registered for DeLorme Earthmate USB
+[    1.640000] USB Serial support registered for HID->COM RS232 Adapter
+[    1.650000] USB Serial support registered for Nokia CA-42 V2 Adapter
+[    1.655000] usbcore: registered new interface driver digi_acceleport
+[    1.660000] USB Serial support registered for Digi 2 port USB adapter
+[    1.665000] USB Serial support registered for Digi 4 port USB adapter
+[    1.675000] usbcore: registered new interface driver io_edgeport
+[    1.680000] USB Serial support registered for Edgeport 2 port adapter
+[    1.685000] USB Serial support registered for Edgeport 4 port adapter
+[    1.695000] USB Serial support registered for Edgeport 8 port adapter
+[    1.700000] USB Serial support registered for EPiC device
+[    1.705000] usbcore: registered new interface driver io_ti
+[    1.710000] USB Serial support registered for Edgeport TI 1 port adapter
+[    1.715000] USB Serial support registered for Edgeport TI 2 port adapter
+[    1.725000] usbcore: registered new interface driver empeg
+[    1.730000] usb 1-2: new high-speed USB device number 2 using s5p-ehci
+[    1.735000] USB Serial support registered for empeg
+[    1.740000] usbcore: registered new interface driver f81232
+[    1.745000] USB Serial support registered for f81232
+[    1.750000] usbcore: registered new interface driver ftdi_sio
+[    1.755000] USB Serial support registered for FTDI USB Serial Device
+[    1.765000] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver
+[    1.770000] usbcore: registered new interface driver funsoft
+[    1.775000] USB Serial support registered for funsoft
+[    1.780000] usbcore: registered new interface driver garmin_gps
+[    1.785000] USB Serial support registered for Garmin GPS usb/tty
+[    1.790000] usbcore: registered new interface driver hp4x
+[    1.795000] USB Serial support registered for hp4X
+[    1.800000] usbcore: registered new interface driver ipaq
+[    1.805000] USB Serial support registered for PocketPC PDA
+[    1.810000] usbcore: registered new interface driver ipw
+[    1.815000] USB Serial support registered for IPWireless converter
+[    1.825000] usbcore: registered new interface driver ir_usb
+[    1.830000] USB Serial support registered for IR Dongle
+[    1.835000] ir_usb: v0.5:USB IR Dongle driver
+[    1.840000] usbcore: registered new interface driver iuu_phoenix
+[    1.845000] USB Serial support registered for iuu_phoenix
+[    1.850000] usbcore: registered new interface driver keyspan
+[    1.855000] USB Serial support registered for Keyspan - (without firmware)
+[    1.860000] USB Serial support registered for Keyspan 1 port adapter
+[    1.870000] USB Serial support registered for Keyspan 2 port adapter
+[    1.875000] USB Serial support registered for Keyspan 4 port adapter
+[    1.880000] usbcore: registered new interface driver keyspan_pda
+[    1.885000] USB Serial support registered for Keyspan PDA
+[    1.895000] usb 1-2: New USB device found, idVendor=0424, idProduct=4604
+[    1.895000] USB Serial support registered for Keyspan PDA - (prerenumeration)
+[    1.895000] USB Serial support registered for Xircom / Entregra PGS - (prerenumeration)
+[    1.895000] usbcore: registered new interface driver kl5kusb105
+[    1.895000] USB Serial support registered for KL5KUSB105D / PalmConnect
+[    1.895000] usbcore: registered new interface driver kobil_sct
+[    1.895000] USB Serial support registered for KOBIL USB smart card terminal
+[    1.895000] usbcore: registered new interface driver mct_u232
+[    1.895000] USB Serial support registered for MCT U232
+[    1.895000] usbcore: registered new interface driver metro_usb
+[    1.895000] USB Serial support registered for Metrologic USB to Serial
+[    1.895000] usbcore: registered new interface driver mos7720
+[    1.895000] USB Serial support registered for Moschip 2 port adapter
+[    1.895000] usbcore: registered new interface driver mos7840
+[    1.895000] USB Serial support registered for Moschip 7840/7820 USB Serial Driver
+[    1.895000] usbcore: registered new interface driver moto_modem
+[    1.895000] USB Serial support registered for moto-modem
+[    1.895000] usbcore: registered new interface driver navman
+[    1.895000] USB Serial support registered for navman
+[    1.895000] usbcore: registered new interface driver omninet
+[    1.895000] USB Serial support registered for ZyXEL - omni.net lcd plus usb
+[    1.895000] usbcore: registered new interface driver opticon
+[    1.895000] USB Serial support registered for opticon
+[    1.895000] usbcore: registered new interface driver option
+[    1.895000] USB Serial support registered for GSM modem (1-port)
+[    1.895000] usbcore: registered new interface driver oti6858
+[    1.895000] USB Serial support registered for oti6858
+[    1.895000] usbcore: registered new interface driver pl2303
+[    1.895000] USB Serial support registered for pl2303
+[    1.895000] usbcore: registered new interface driver qcaux
+[    1.895000] USB Serial support registered for qcaux
+[    1.895000] usbcore: registered new interface driver qcserial
+[    1.895000] USB Serial support registered for Qualcomm USB modem
+[    1.895000] usbcore: registered new interface driver quatech2
+[    1.895000] USB Serial support registered for Quatech 2nd gen USB to Serial Driver
+[    1.895000] safe_serial: v0.1:USB Safe Encapsulated Serial
+[    1.895000] usbcore: registered new interface driver safe_serial
+[    1.895000] USB Serial support registered for safe_serial
+[    1.895000] usbcore: registered new interface driver siemens_mpi
+[    1.895000] USB Serial support registered for siemens_mpi
+[    1.895000] usbcore: registered new interface driver sierra
+[    1.895000] USB Serial support registered for Sierra USB modem
+[    1.895000] usbcore: registered new interface driver spcp8x5
+[    1.895000] USB Serial support registered for SPCP8x5
+[    1.895000] usbcore: registered new interface driver ssu100
+[    1.895000] USB Serial support registered for Quatech SSU-100 USB to Serial Driver
+[    1.895000] usbcore: registered new interface driver symbolserial
+[    1.895000] USB Serial support registered for symbol
+[    1.895000] usbcore: registered new interface driver ti_usb_3410_5052
+[    1.895000] USB Serial support registered for TI USB 3410 1 port adapter
+[    1.895000] USB Serial support registered for TI USB 5052 2 port adapter
+[    1.895000] ti_usb_3410_5052: v0.10:TI USB 3410/5052 Serial Driver
+[    1.895000] usbcore: registered new interface driver visor
+[    1.895000] USB Serial support registered for Handspring Visor / Palm OS
+[    1.895000] USB Serial support registered for Sony Clie 5.0
+[    1.895000] USB Serial support registered for Sony Clie 3.5
+[    1.895000] usbcore: registered new interface driver whiteheat
+[    1.895000] USB Serial support registered for Connect Tech - WhiteHEAT - (prerenumeration)
+[    1.895000] USB Serial support registered for Connect Tech - WhiteHEAT
+[    1.895000] usbcore: registered new interface driver vivopay_serial
+[    1.895000] USB Serial support registered for vivopay-serial
+[    1.895000] usbcore: registered new interface driver zio
+[    1.895000] USB Serial support registered for zio
+[    1.895000] s3c-hsotg s3c-hsotg: regs f0500000, irq 103
+[    1.895000] s3c-hsotg s3c-hsotg: PHY already ON
+[    1.895000] s3c-hsotg s3c-hsotg: EPs:15
+[    1.895000] s3c-hsotg s3c-hsotg: dedicated fifos
+[    1.895000] s3c-hsotg s3c-hsotg: still being used
+[    1.895000] file system registered
+[    1.895000]  gadget: Mass Storage Function, version: 2009/09/11
+[    1.895000]  gadget: Number of LUNs=1
+[    1.895000]  lun0: LUN: removable file: (no medium)
+[    1.895000]  gadget: android_usb ready
+[    1.895000] s3c-hsotg s3c-hsotg: bound driver android_usb
+[    1.895000] s3c-hsotg s3c-hsotg: PHY already ON
+[    1.900000] s3c-hsotg s3c-hsotg: s3c_hsotg_irq: USBRst
+[    1.900000] s3c-hsotg s3c-hsotg: still being used
+[    1.900000] mousedev: PS/2 mouse device common for all mice
+[    1.900000] usbcore: registered new interface driver xpad
+[    1.900000] touchscreen-1wire	initialized
+[    1.900000] backlight-1wire	initialized
+[    1.900000] setup_irq: ret = 0
+[    1.900000] PWM clock = 100000000
+[    1.900000] TCNT_FOR_SAMPLE_BIT = 650, TCFG1 = 00010000
+[    1.900000] input: fa_ts_input as /devices/virtual/input/input0
+[    1.900000] ts-if	initialized
+[    1.900000] s3c-rtc s3c64xx-rtc: rtc core: registered s3c as rtc0
+[    1.900000] i2c /dev entries driver
+[    1.900000] gspca_main: v2.14.0 registered
+[    1.900000] usbcore: registered new interface driver benq
+[    1.900000] usbcore: registered new interface driver conex
+[    1.900000] usbcore: registered new interface driver cpia1
+[    1.900000] usbcore: registered new interface driver etoms
+[    1.900000] usbcore: registered new interface driver finepix
+[    1.900000] usbcore: registered new interface driver jeilinj
+[    1.900000] usbcore: registered new interface driver jl2005bcd
+[    1.900000] usbcore: registered new interface driver kinect
+[    1.900000] usbcore: registered new interface driver konica
+[    1.900000] usbcore: registered new interface driver mars
+[    1.900000] usbcore: registered new interface driver mr97310a
+[    1.900000] usbcore: registered new interface driver nw80x
+[    1.900000] usbcore: registered new interface driver ov519
+[    1.900000] usbcore: registered new interface driver ov534
+[    1.900000] usbcore: registered new interface driver ov534_9
+[    1.900000] usbcore: registered new interface driver pac207
+[    1.900000] usbcore: registered new interface driver gspca_pac7302
+[    1.900000] usbcore: registered new interface driver pac7311
+[    1.900000] usbcore: registered new interface driver se401
+[    1.900000] usbcore: registered new interface driver sn9c2028
+[    1.900000] usbcore: registered new interface driver gspca_sn9c20x
+[    1.900000] usbcore: registered new interface driver sonixb
+[    1.900000] usbcore: registered new interface driver sonixj
+[    1.900000] usbcore: registered new interface driver spca500
+[    1.900000] usbcore: registered new interface driver spca501
+[    1.900000] usbcore: registered new interface driver spca505
+[    1.900000] usbcore: registered new interface driver spca506
+[    1.900000] usbcore: registered new interface driver spca508
+[    1.900000] usbcore: registered new interface driver spca561
+[    1.900000] usbcore: registered new interface driver spca1528
+[    1.900000] usbcore: registered new interface driver sq905
+[    1.900000] usbcore: registered new interface driver sq905c
+[    1.900000] usbcore: registered new interface driver sq930x
+[    1.900000] usbcore: registered new interface driver sunplus
+[    1.900000] usbcore: registered new interface driver stk014
+[    1.900000] usbcore: registered new interface driver stv0680
+[    1.900000] usbcore: registered new interface driver t613
+[    1.900000] usbcore: registered new interface driver gspca_topro
+[    1.900000] usbcore: registered new interface driver tv8532
+[    1.900000] usbcore: registered new interface driver vc032x
+[    1.900000] usbcore: registered new interface driver vicam
+[    1.900000] usbcore: registered new interface driver xirlink-cit
+[    1.900000] usbcore: registered new interface driver gspca_zc3xx
+[    1.900000] usbcore: registered new interface driver ALi m5602
+[    1.900000] usbcore: registered new interface driver STV06xx
+[    1.900000] usbcore: registered new interface driver gspca_gl860
+[    1.930000] FIMC-IS probe completed
+[    1.930000] [INFO]flite_probe:756: fimc-lite0 probe success
+[    1.930000] [INFO]flite_probe:756: fimc-lite1 probe success
+[    1.930000] s5p-fimc-md: Registered fimc.0.m2m as /dev/video0
+[    1.930000] s5p-fimc-md: Registered fimc.0.capture as /dev/video1
+[    1.930000] s5p-fimc-md: Registered fimc.1.m2m as /dev/video2
+[    1.930000] s5p-fimc-md: Registered fimc.1.capture as /dev/video3
+[    1.930000] s5p-fimc-md: Registered fimc.2.m2m as /dev/video4
+[    1.930000] s5p-fimc-md: Registered fimc.2.capture as /dev/video5
+[    1.930000] s5p-fimc-md: Registered fimc.3.m2m as /dev/video6
+[    1.935000] s5p-fimc-md: Registered fimc.3.capture as /dev/video7
+[    1.935000] s5p-mfc s5p-mfc: decoder registered as /dev/video8
+[    1.935000] s5p-mfc s5p-mfc: encoder registered as /dev/video9
+[    1.935000] HDMI unplugged
+[    1.935000] s5p-hdmiphy 8-0038: probe successful
+[    1.935000] s5p-hdmi exynos4-hdmi: probe successful
+[    1.935000] i2c-core: driver [s5p_ddc] using legacy suspend method
+[    1.935000] i2c-core: driver [s5p_ddc] using legacy resume method
+[    1.935000] Samsung TV Mixer driver, (c) 2010-2011 Samsung Electronics Co., Ltd.
+[    1.935000] s5p-mixer s5p-mixer: probe start
+[    1.935000] s5p-mixer s5p-mixer: resources acquired
+[    1.935000] s5p-mixer s5p-mixer: added output 'S5P HDMI connector' from module 's5p-hdmi'
+[    1.935000] s5p-mixer s5p-mixer: module s5p-sdo is missing
+[    1.935000] s5p-mixer s5p-mixer: registered layer graph0 as /dev/video10
+[    1.935000] s5p-mixer s5p-mixer: registered layer graph1 as /dev/video11
+[    1.935000] s5p-mixer s5p-mixer: registered layer video0 as /dev/video12
+[    1.935000] s5p-mixer s5p-mixer: probe successful
+[    1.935000] Initialize JPEG driver
+[    1.935000] s5p-jpeg s5p-jpeg.0: JPEG driver is registered to /dev/video13
+[    1.935000] Exynos Graphics 2D driver, (c) 2011 Samsung Electronics
+[    1.935000] [fimg2d_probe] base address: 0x10800000
+[    1.935000] [fimg2d_probe] irq: 121
+[    1.935000] [fimg2d_clk_setup] parent clk: mout_g2d0
+[    1.935000] [fimg2d_clk_setup] sclk: sclk_fimg2d
+[    1.935000] [fimg2d_clk_setup] clkrate: 200000000 parent clkrate: 800000000
+[    1.935000] [fimg2d_clk_setup] gate clk: fimg2d
+[    1.935000] [fimg2d_probe] enable runtime pm
+[    1.935000] [fimg2d_probe] sysmmu disabled for fimg2d
+[    1.935000] usbcore: registered new interface driver uvcvideo
+[    1.935000] USB Video Class driver (1.1.1)
+[    1.935000] samsung-fake-battery samsung-fake-battery: samsung_fake_bat_probe
+[    1.935000] i2c-core: driver [mma7660] using legacy suspend method
+[    1.935000] i2c-core: driver [mma7660] using legacy resume method
+[    1.935000] MMA7660 sensor driver registered.
+[    1.935000] Exynos: Kernel Thermal management registered
+[    1.935000] s3c2410_wdt: S3C2410 Watchdog Timer, (c) 2004 Simtec Electronics
+[    1.935000] s3c2410-wdt s3c2410-wdt: watchdog inactive, reset disabled, irq disabled
+[    1.935000] device-mapper: uevent: version 1.0.3
+[    1.935000] device-mapper: ioctl: 4.22.0-ioctl (2011-10-19) initialised: dm-devel@redhat.com
+[    1.935000] Bluetooth: Virtual HCI driver ver 1.3
+[    1.935000] Bluetooth: HCI UART driver ver 2.2
+[    1.935000] Bluetooth: HCI H4 protocol initialized
+[    1.935000] Bluetooth: HCI BCSP protocol initialized
+[    1.935000] Bluetooth: HCILL protocol initialized
+[    1.935000] usbcore: registered new interface driver bcm203x
+[    1.935000] usbcore: registered new interface driver bpa10x
+[    1.935000] usbcore: registered new interface driver bfusb
+[    1.935000] usbcore: registered new interface driver btusb
+[    1.935000] cpuidle: using governor ladder
+[    2.965000] usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    2.970000] cpuidle: using governor menu
+[    2.970000] sdhci: Secure Digital Host Controller Interface driver
+[    2.970000] sdhci: Copyright(c) Pierre Ossman
+[    2.970000] Synopsys Designware Multimedia Card Interface Driver
+[    2.990000] dw_mmc dw_mmc: Using internal DMA controller.
+[    2.990000] hub 1-2:1.0: USB hub found
+[    2.990000] hub 1-2:1.0: 5 ports detected
+[    3.040000] mmc_host mmc0: Bus speed (slot 0) = 50000000Hz (slot req 400000Hz, actual 396825HZ div = 63)
+[    3.040000] dw_mmc dw_mmc: Version ID is 240a
+[    3.040000] dw_mmc dw_mmc: DW MMC controller at irq 109, 32 bit host data width, 128 deep fifo
+[    3.040000] s3c-sdhci exynos4-sdhci.2: clock source 2: mmc_busclk.2 (100000000 Hz)
+[    3.040000] Registered led device: mmc1::
+[    3.070000] mmc1: SDHCI controller on samsung-hsmmc [exynos4-sdhci.2] using ADMA
+[    3.070000] s3c-sdhci exynos4-sdhci.3: clock source 2: mmc_busclk.2 (100000000 Hz)
+[    3.070000] Registered led device: mmc2::
+[    3.085000] mmc_host mmc0: Bus speed (slot 0) = 50000000Hz (slot req 52000000Hz, actual 50000000HZ div = 0)
+[    3.085000] mmc_host mmc0: Bus speed (slot 0) = 100000000Hz (slot req 52000000Hz, actual 50000000HZ div = 1)
+[    3.085000] mmc0: new high speed DDR MMC card at address 0001
+[    3.090000] mmcblk0: mmc0:0001 4YMD3R 3.64 GiB 
+[    3.095000] mmcblk0boot0: mmc0:0001 4YMD3R partition 1 4.00 MiB
+[    3.100000] mmc2: SDHCI controller on samsung-hsmmc [exynos4-sdhci.3] using ADMA
+[    3.100000] usbcore: registered new interface driver usbhid
+[    3.100000] usbhid: USB HID core driver
+[    3.100000] Samsung Audio Subsystem Driver, (c) 2011 Samsung Electronics
+[    3.100000] audss_init: RCLK SRC[busclk]
+[    3.100000] Samsung SRP driver, (c)2011 Samsung Electronics
+[    3.135000] mmcblk0boot1: mmc0:0001 4YMD3R partition 2 4.00 MiB
+[    3.140000]  mmcblk0: p1 p2 p3 p4
+[    3.140000] GACT probability NOT on
+[    3.140000] Mirror/redirect action on
+[    3.140000] u32 classifier
+[    3.140000]     Actions configured
+[    3.140000] Netfilter messages via NETLINK v0.30.
+[    3.140000] nf_conntrack version 0.5.0 (15535 buckets, 62140 max)
+[    3.140000] ctnetlink v0.93: registering with nfnetlink.
+[    3.140000] NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+[    3.140000] NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+[    3.140000] xt_time: kernel timezone is -0000
+[    3.140000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    3.140000] arp_tables: (C) 2002 David S. Miller
+[    3.140000] TCP: cubic registered
+[    3.140000] Initializing XFRM netlink socket
+[    3.140000] NET: Registered protocol family 10
+[    3.140000] mip6: Mobile IPv6
+[    3.140000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    3.145000] sit: IPv6 over IPv4 tunneling driver
+[    3.145000] NET: Registered protocol family 17
+[    3.145000] NET: Registered protocol family 15
+[    3.230000] Bluetooth: RFCOMM TTY layer initialized
+[    3.235000]  mmcblk0boot1: unknown partition table
+[    3.235000]  mmcblk0boot0: unknown partition table
+[    3.245000] Bluetooth: RFCOMM socket layer initialized
+[    3.250000] Bluetooth: RFCOMM ver 1.11
+[    3.255000] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    3.260000] Bluetooth: BNEP filters: protocol multicast
+[    3.265000] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    3.270000] NET: Registered protocol family 35
+[    3.275000] Key type dns_resolver registered
+[    3.280000] EXYNOS4X12: Adaptive Support Voltage init
+[    3.285000] EXYNOS4X12(SG): ORIG : 4 MOD : 0 RESULT : 4
+[    3.290000] EXYNOS: Fail to get HPM Value
+[    3.295000] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+[    3.300000] ThumbEE CPU extension supported.
+[    3.305000] Registering SWP/SWPB emulation handler
+[    3.310000] [ 6 ] Memory Type Undertermined.
+[    3.315000] DVFS : VDD_INT Voltage table set with 0 Group
+[    3.325000] usb 1-2.4: new high-speed USB device number 3 using s5p-ehci
+[    3.345000] Failed to init busfreq.
+[    3.345000] s3c-rtc s3c64xx-rtc: setting system clock to 2016-10-10 14:56:35 UTC (1476111395)
+[    3.345000] hotplug_policy_init: intialised with policy : DVFS_NR_BASED_HOTPLUG
+[    3.345000] ALSA device list:
+[    3.350000]   No soundcards found.
+[    3.355000] EXT2-fs (mmcblk0p3): warning: mounting ext3 filesystem as ext2
+[    3.360000] EXT2-fs (mmcblk0p3): warning: mounting unchecked fs, running e2fsck is recommended
+[    3.370000] VFS: Mounted root (ext2 filesystem) on device 179:3.
+[    3.375000] Freeing init memory: 212K
+[    3.440000] usb 1-2.4: config 1 interface 0 altsetting 0 endpoint 0x83 has an invalid bInterval 0, changing to 9
+[    3.510000] usb 1-2.4: New USB device found, idVendor=0a46, idProduct=9621
+[    3.510000] usb 1-2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    3.515000] dm962x: dm_read_reg() 0x29 0x0a
+[    3.515000] dm962x: dm_read_reg() 0x28 0x46
+[    3.515000] dm962x: dm_read_reg() 0x2b 0x96
+[    3.515000] dm962x: dm_read_reg() 0x2a 0x21
+[    3.520000] dm962x: dm_read_reg() 0xF2 0x00
+[    3.525000] dm962x:  [Analysis.2] 0xF2, D[7] 0 OK
+[    3.530000] dm962x:  [Analysis.2] 0xF2, D[6] 0 OK
+[    3.535000] dm962x:  [Analysis.2] 0xF2, D[5] 0 EP1: Empty
+[    3.540000] dm962x:  [Analysis.2] 0xF2, D[3] 0 OK
+[    3.545000] dm962x:  [Analysis.2] 0xF2, D[2] 0 OK
+[    3.550000] dm962x:  [Analysis.2] 0xF2, D[1] 0 OK
+[    3.555000] dm962x:  [Analysis.2] 0xF2, D[0] 0 Status: TX buffer 0 pkts
+[    3.565000] dm962x: ethernet MAC address 00:00:ff:ff:00:00 (chip)
+[    3.565000] dm962x: 9620 Mode = 128
+[    3.580000] dm9620 1-2.4:1.0: eth0: register 'dm9620' at usb-s5p-ehci-2.4, Davicom DM9620 USB Ethernet, 00:00:ff:ff:00:00
+[    3.665000] usb 1-2.5: new high-speed USB device number 4 using s5p-ehci
+[    3.770000] usb 1-2.5: New USB device found, idVendor=0424, idProduct=2530
+[    3.770000] usb 1-2.5: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[    3.770000] usb 1-2.5: Product: Bridge device
+[    8.040000] FriendlyARM http://www.arm9.net
+[    8.040000] tiny4412-audio tiny4412-audio: snd_soc_register_card() failed:-517
+[    8.040000] platform tiny4412-audio: Driver tiny4412-audio requests probe deferral
+[    8.075000] rtw driver version=v3.4.4_4749.20121105 
+[    8.075000] Build at: Aug 14 2013 17:16:01
+[    8.075000] usbcore: registered new interface driver rtl8192cu
+[    8.090000] Compat-drivers backport release: compat-drivers-v3.8.3-2-snpu
+[    8.090000] Backport based on linux-stable.git v3.8.3
+[    8.090000] compat.git: linux-stable.git
+[    8.105000] cfg80211: Calling CRDA to update world regulatory domain
+[    8.145000] usbcore: registered new interface driver ath9k_htc
+[    8.160000] usbcore: registered new interface driver rt73usb
+[    8.175000] usbcore: registered new interface driver rt2800usb
+[    8.190000] usbcore: registered new interface driver zd1211rw
+[    8.205000] libertas_sdio: Libertas SDIO driver
+[    8.205000] libertas_sdio: Copyright Pierre Ossman
+[    8.220000] dm9620 1-2.4:1.0: eth0: link up, 100Mbps, full-duplex, lpa 0xC5E1
+[    8.225000] link_reset() speed: 100 duplex: 1
+[    8.225000] nf_conntrack: automatic helper assignment is deprecated and it will be removed soon. Use the iptables CT target to attach helpers instead.
+[    8.265000] jpeg_m2m_open: cannot specify node type
+[    8.350000] IPv6: eth0: IPv6 duplicate address fe80::200:ffff:feff:0 detected!

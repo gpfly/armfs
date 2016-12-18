@@ -1,0 +1,13 @@
+
+kmalloc/kcalloc/krealloc/kzalloc --> kfree
+
+vmalloc/vzalloc     --> vfree
+
+__get_free_pages    --> free_pages
+
+dma_alloc_coherent	--> dma_free_coherent
+
+
+
+
+

@@ -1,0 +1,80 @@
+
+
+注册字符设备驱动用到的函数接口：
+
+
+一. 设备号的理解及相关宏:
+
+#define MINORBITS	20
+#define MINORMASK	((1U << MINORBITS) - 1)
+
+#define MAJOR(dev)	((unsigned int) ((dev) >> MINORBITS))
+#define MINOR(dev)	((unsigned int) ((dev) & MINORMASK))
+#define MKDEV(ma,mi)	(((ma) << MINORBITS) | (mi))
+
+static inline unsigned iminor(const struct inode *inode)
+{
+	return MINOR(inode->i_rdev);
+}
+
+static inline unsigned imajor(const struct inode *inode)
+{
+	return MAJOR(inode->i_rdev);
+}
+
+
+dev_t 类型用于定义设备号。
+
+二. 最原始的注册字符设备驱动的函数接口
+
+注册:
+int 
+register_chrdev(
+	unsigned int major, //主设备号
+	const char *name,	//设备的名字
+	const struct file_operations *fops	//驱动函数集
+);
+
+
+移除之前注册的字符设备驱动:
+void unregister_chrdev(unsigned int major, const char *name);
+
+三. 注册字符设备驱动的方法二
+
+
+	首先，动态或静态申请注册设备号:
+
+		静态注册：
+
+		int 
+		register_chrdev_region(
+			dev_t from, 		//设备号，MKDEV(ma, mi);
+			unsigned count, 	//设备的个数
+			const char *name	//设备的名字
+		);
+
+		动态申请注册:
+
+		int alloc_chrdev_region(
+			dev_t *dev,  //返回的设备号
+			unsigned baseminor, //指定的次设备号	
+			unsigned count,		//次设备号的个数
+			const char *name	//设备的名字	
+		);
+		
+
+	其次，一个字符设备的驱动对应一个strcut cdev的对象。初始化并注册此对象。
+
+	static struct file_operations fops = {
+		...
+	};
+
+	struct cdev cdev; //定义变量
+	cdev_init(&cdev, &fops);
+	cdev_add(&cdev, devnum, cnt);
+
+
+		
+
+
+

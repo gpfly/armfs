@@ -1,0 +1,16 @@
+config WDT_DRV
+	tristate "Char driver for 4412 WDT"
+	help
+	  xxx
+
+config SUPPORT_RESET
+	bool "watchdog support hardware reset"
+	help
+	  support reset or interrupt
+
+config WDT_TIME
+	int "Default watchdog timeout"
+	default "10"
+	help
+	  xxx
+

@@ -1,0 +1,29 @@
+
+
+信号量:
+
+struct semaphore;
+
+//struct semaphore sema;
+
+初始化信号量:
+
+//sema_init(&sema, 2);
+
+//val: 是制定锁的持有者的个数。
+void sema_init(struct semaphore *sem, int val)
+
+加锁:
+
+//down(&sema);
+
+//当获取信号量时不能拿到，那么对应进程一直睡到
+//可以获取信号量。
+void down(struct semaphore *sem)
+
+down_trylock();
+
+解锁:
+
+//up(&sema);
+void up(struct semaphore *sem)

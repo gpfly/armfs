@@ -1,0 +1,153 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADCBASE	include/adc.h	4;"	d
+ADCCON	include/adc.h	6;"	d
+ADCDAT	include/adc.h	8;"	d
+ADCDLY	include/adc.h	7;"	d
+ADCMUX	include/adc.h	10;"	d
+ADC_CFG	include/adc.h	12;"	d
+AS	Makefile	/^AS			:= $(CROSS_COMPILE)as$/;"	m
+BIN	Makefile	/^BIN			:= $(TARGET).bin$/;"	m
+CC	Makefile	/^CC			:= $(CROSS_COMPILE)gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS			:= -Wall -I.\/include\/ -fno-builtin$/;"	m
+CLRINTADC	include/adc.h	9;"	d
+CROSS_COMPILE	Makefile	/^CROSS_COMPILE	:= arm-linux-$/;"	m
+DEV_ADDR	mma7660.c	2;"	d	file:
+DUMP	Makefile	/^DUMP			:= $(TARGET).s$/;"	m
+EXT_INT41CON	include/tp.h	5;"	d
+EXT_INT41_FLTCON1	include/tp.h	8;"	d
+EXT_INT41_MASK	include/tp.h	6;"	d
+EXT_INT41_PEND	include/tp.h	7;"	d
+EXT_INT43CON	include/iic.h	39;"	d
+EXT_INT43_FLTCON0	include/iic.h	40;"	d
+EXT_INT43_MASK	include/iic.h	41;"	d
+EXT_INT43_PEND	include/iic.h	42;"	d
+GPA1CON	include/iic.h	35;"	d
+GPD1CON	include/iic.h	36;"	d
+GPX1CON	include/tp.h	4;"	d
+GPX3CON	include/iic.h	38;"	d
+HIGH_VECTOR_PA_BASE	include/vectors.h	7;"	d
+HIGH_VECTOR_VA_BASE	include/vectors.h	6;"	d
+I2CADDn	include/iic.h	/^	unsigned int I2CADDn;$/;"	m	struct:__anon1
+I2CCONn	include/iic.h	/^	unsigned int I2CCONn;$/;"	m	struct:__anon1
+I2CDSn	include/iic.h	/^	unsigned int I2CDSn;$/;"	m	struct:__anon1
+I2CLCn	include/iic.h	/^	unsigned int I2CLCn;$/;"	m	struct:__anon1
+I2CSTATn	include/iic.h	/^	unsigned int I2CSTATn;$/;"	m	struct:__anon1
+I2C_REG_T	include/iic.h	/^}I2C_REG_T;$/;"	t	typeref:struct:__anon1
+ICCBASE	include/irq.h	7;"	d
+ICCBASE	include/regs.h	5;"	d
+ICCEOIR_CPU0	include/irq.h	20;"	d
+ICCEOIR_CPU0	include/regs.h	11;"	d
+ICCIAR_CPU0	include/irq.h	19;"	d
+ICCIAR_CPU0	include/regs.h	10;"	d
+ICCICR_CPU0	include/irq.h	10;"	d
+ICCICR_CPU0	include/regs.h	8;"	d
+ICCPMR_CPU0	include/irq.h	11;"	d
+ICCPMR_CPU0	include/regs.h	9;"	d
+ICDBASE	include/irq.h	8;"	d
+ICDBASE	include/regs.h	6;"	d
+ICDDCR	include/irq.h	13;"	d
+ICDDCR	include/regs.h	14;"	d
+ICDIPR0_CPU0	include/irq.h	17;"	d
+ICDIPR0_CPU0	include/regs.h	15;"	d
+ICDIPTR0_CPU0	include/irq.h	16;"	d
+ICDIPTR0_CPU0	include/regs.h	16;"	d
+ICDISER0_CPU0	include/irq.h	15;"	d
+ICDISER0_CPU0	include/regs.h	13;"	d
+ICDSGIR	include/irq.h	22;"	d
+ICDSGIR	include/regs.h	17;"	d
+IESR2	include/adc.h	18;"	d
+IIC0_BASE	include/iic.h	5;"	d
+IIC0_reg	include/iic.h	/^I2C_REG_T *IIC0_reg = (I2C_REG_T *)IIC0_BASE; $/;"	v
+IIC1_BASE	include/iic.h	6;"	d
+IIC1_reg	include/iic.h	/^I2C_REG_T *IIC1_reg = (I2C_REG_T *)IIC1_BASE; $/;"	v
+IIC2_BASE	include/iic.h	7;"	d
+IIC2_reg	include/iic.h	/^I2C_REG_T *IIC2_reg = (I2C_REG_T *)IIC2_BASE; $/;"	v
+IIC3_BASE	include/iic.h	8;"	d
+IIC3_reg	include/iic.h	/^I2C_REG_T *IIC3_reg = (I2C_REG_T *)IIC3_BASE; $/;"	v
+IIC4_BASE	include/iic.h	9;"	d
+IIC4_reg	include/iic.h	/^I2C_REG_T *IIC4_reg = (I2C_REG_T *)IIC4_BASE; $/;"	v
+IIC5_BASE	include/iic.h	10;"	d
+IIC5_reg	include/iic.h	/^I2C_REG_T *IIC5_reg = (I2C_REG_T *)IIC5_BASE; $/;"	v
+IIC6_BASE	include/iic.h	11;"	d
+IIC6_reg	include/iic.h	/^I2C_REG_T *IIC6_reg = (I2C_REG_T *)IIC6_BASE; $/;"	v
+IIC7_BASE	include/iic.h	12;"	d
+IIC7_reg	include/iic.h	/^I2C_REG_T *IIC7_reg = (I2C_REG_T *)IIC7_BASE; $/;"	v
+IIC8_BASE	include/iic.h	13;"	d
+IIC8_reg	include/iic.h	/^I2C_REG_T *IIC8_reg = (I2C_REG_T *)IIC8_BASE; $/;"	v
+IRQMAX	include/irq.h	6;"	d
+ISTR2	include/adc.h	19;"	d
+LD	Makefile	/^LD			:= $(CROSS_COMPILE)ld$/;"	m
+LEV	include/tp.h	13;"	d
+MAX_WAIT	mma7660.c	91;"	d	file:
+MILLET_ISR_H_	include/isr.h	2;"	d
+MILLET_MMU_H_	include/mmu.h	2;"	d
+MILLET_TP_H_	include/tp.h	2;"	d
+MILLET_VECTORS_H_	include/vectors.h	2;"	d
+NM	Makefile	/^NM			:= $(CROSS_COMPILE)nm$/;"	m
+NULL	include/common.h	10;"	d
+OBJCOPY	Makefile	/^OBJCOPY			:= $(CROSS_COMPILE)objcopy$/;"	m
+OBJDUMP	Makefile	/^OBJDUMP			:= $(CROSS_COMPILE)objdump$/;"	m
+OBJS	Makefile	/^OBJS			:= main.o$/;"	m
+ST	start.S	/^ST:$/;"	l
+START_ENABLE_CVT	include/adc.h	16;"	d
+START_OBJ	Makefile	/^START_OBJ		:= start.o$/;"	m
+START_READ_CVT	include/adc.h	15;"	d
+TARGET	Makefile	/^TARGET			:= arm$/;"	m
+TP_IRQ	include/tp.h	12;"	d
+TTB_BASE	include/vectors.h	8;"	d
+WAIT_CVT_END	include/adc.h	14;"	d
+WDTBASE	include/regs.h	19;"	d
+WTCLRINT	include/regs.h	24;"	d
+WTCNT	include/regs.h	23;"	d
+WTCON	include/regs.h	21;"	d
+WTDAT	include/regs.h	22;"	d
+_ADC_H_	include/adc.h	2;"	d
+_COMMON_H_	include/common.h	2;"	d
+_IRQ_H_	include/irq.h	2;"	d
+_IRQ_H_	include/regs.h	2;"	d
+__IIC_REG_H	include/iic.h	3;"	d
+__MMA7660_H	include/mma7660.h	2;"	d
+__bss_end	start.S	/^__bss_end:$/;"	l
+__bss_start	start.S	/^__bss_start:$/;"	l
+__iic_write	mma7660.c	/^int __iic_write(unsigned char reg_addr, unsigned char data)$/;"	f
+_clr_bss	start.S	/^_clr_bss:$/;"	l
+_do_irq	start.S	/^_do_irq:$/;"	l
+_millet	start.S	/^_millet:$/;"	l
+_start	start.S	/^_start:$/;"	l
+build_vectors	vectors.c	/^void build_vectors(void)$/;"	f
+create_desciptor	include/mmu.h	6;"	d
+delay	mma7660.c	/^void delay(int val)$/;"	f
+do_eint25	mma7660.c	/^static void do_eint25(void)$/;"	f	file:
+do_irq	irq.c	/^void do_irq(void)$/;"	f
+eint25_init	mma7660.c	/^static inline void eint25_init(void)$/;"	f	file:
+flag	irq.c	/^static int flag = 0;$/;"	v	file:
+i2c3_init	mma7660.c	/^static inline void i2c3_init(void)$/;"	f	file:
+i2c_mma_eint25_init	mma7660.c	/^void i2c_mma_eint25_init(void)$/;"	f
+iic_millet__	start.S	/^iic_millet__:$/;"	l
+iic_write	mma7660.c	/^int iic_write(unsigned char reg_addr, unsigned char data)$/;"	f
+init_ttb	mmu.c	/^void init_ttb(u32 *ttb_base)$/;"	f
+irq	start.S	/^irq:$/;"	l
+irq_request_cpu0_	irq.c	/^void irq_request_cpu0_(int irqnum, void (*handler)(void), int pri)$/;"	f
+isr_t	include/irq.h	/^typedef void (*isr_t)(void);$/;"	t
+isres	irq.c	/^static isr_t isres[160];$/;"	v	file:
+main	main.c	/^int main(void)$/;"	f
+memcpy	mmu.c	/^void memcpy(char *dst, char *src, u32 size)$/;"	f
+memset	mmu.c	/^void memset(char *buf, char ch, u32 size)$/;"	f
+mma_init	mma7660.c	/^static inline void mma_init(void)$/;"	f	file:
+mmu_enable	mmu.c	/^void mmu_enable(u32 *ttb)$/;"	f
+printf	include/common.h	8;"	d
+read_data	mma7660.c	/^unsigned char read_data(unsigned char reg_addr)$/;"	f
+reset	start.S	/^reset:	$/;"	l
+resume_iic_scl	mma7660.c	/^void resume_iic_scl(I2C_REG_T *i2c)$/;"	f
+section_map	mmu.c	/^void section_map(u32 *ttb, u32 vir_start, u32 vir_end, u32 phy) $/;"	f
+u16	include/common.h	/^typedef volatile unsigned short u16;$/;"	t
+u32	include/common.h	/^typedef volatile unsigned long u32;$/;"	t
+u8	include/common.h	/^typedef volatile unsigned char u8; $/;"	t
+vectors_end	start.S	/^vectors_end:$/;"	l
+vectors_start	start.S	/^vectors_start:$/;"	l
+wait_until_iic_irq	mma7660.c	/^int wait_until_iic_irq(I2C_REG_T *i2c)$/;"	f

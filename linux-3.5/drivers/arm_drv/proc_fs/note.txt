@@ -1,0 +1,65 @@
+
+proc文件系统给用户提供了一种和内核交互数据的方法。
+在proc目录下创建文件节点的函数接口：
+
+如下一个结构体对象就对应一个要创建的proc文件节点:
+
+struct proc_dir_entry {
+	unsigned int low_ino;
+	umode_t mode;
+	nlink_t nlink;
+	kuid_t uid;
+	kgid_t gid;
+	loff_t size;
+	const struct inode_operations *proc_iops;
+	/*
+	 * NULL ->proc_fops means "PDE is going away RSN" or
+	 * "PDE is just created". In either case, e.g. ->read_proc won't be
+	 * called because it's too late or too early, respectively.
+	 *
+	 * If you're allocating ->proc_fops dynamically, save a pointer
+	 * somewhere.
+	 */
+	const struct file_operations *proc_fops;
+	struct proc_dir_entry *next, *parent, *subdir;
+	void *data; //是read和write的点心
+	read_proc_t *read_proc;   //对应应用层对文件节点进行的read函数
+	write_proc_t *write_proc; //对应应用层对文件节点进行的write函数
+	atomic_t count;		/* use count */
+	int pde_users;	/* number of callers into module in progress */
+	struct completion *pde_unload_completion;
+	struct list_head pde_openers;	/* who did ->open, but not ->release */
+	spinlock_t pde_unload_lock; /* proc_fops checks and pde_users bumps */
+	u8 namelen;
+	char name[];
+};
+
+
+创建proc类型的可读写型文件节点的函数接口。
+
+struct proc_dir_entry *
+create_proc_entry(
+	const char *name, 	//要创建的proc文件节点的文件名
+	umode_t mode,		//要创建的文件的权限
+	struct proc_dir_entry *parent	//proc文件节点所在的父目录
+);
+
+
+举例:
+	入口:
+
+	struct proc_dir_entry *entry;
+
+	entry = create_proc_entry(
+		"myproc",
+		0444,
+		NULL
+	);
+
+	entry->read_proc = myread;
+	entry->write_proc = mywrite;
+	entry->data 	  = &mydevice;
+
+	出口:
+
+	remove_proc_entry("myproc", NULL);

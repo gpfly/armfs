@@ -1,0 +1,26 @@
+
+
+原子操作：
+
+原子类型变量：
+
+//int  v  = 1;
+//atomic_t v = ATOMIC_INIT{1};
+
+//int v;  v = 1;  
+//atomic_t v; atomic_set(&v, 1);
+
+typedef struct {
+	int counter;
+} atomic_t;
+
+
+原子操作：
+
+加法：
+
+#define atomic_add(i, v)	(void) atomic_add_return(i, v)
+#define atomic_inc(v)		atomic_add(1, v)
+#define atomic_inc_and_test(v)	(atomic_add_return(1, v) == 0)
+#define atomic_inc_return(v)    (atomic_add_return(1, v))
+#define atomic_add_negative(i,v) (atomic_add_return(i, v) < 0)

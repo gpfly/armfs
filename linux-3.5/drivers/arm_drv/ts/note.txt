@@ -1,0 +1,60 @@
+
+
+
+对于I2C接口的从设备的驱动，在linux内核
+由软件层面的i2c总线管理匹配从设备及其
+驱动。
+
+
+struct i2c_client {
+	unsigned short flags;		/* div., see below		*/
+	unsigned short addr;		/* chip address - NOTE: 7bit	*/
+					/* addresses are stored in the	*/
+					/* _LOWER_ 7 bits		*/
+	char name[I2C_NAME_SIZE];
+	struct i2c_adapter *adapter;	/* the adapter we sit on	*/
+	struct i2c_driver *driver;	/* and our access routines	*/
+	struct device dev;		/* the device structure		*/
+	int irq;			/* irq issued by device		*/
+	struct list_head detected;
+};
+
+
+对于从设备的设备对象的注册:
+
+代表从设备的资源:
+struct i2c_board_info {
+	char		type[I2C_NAME_SIZE]; //用于和驱动匹配的设备的名字
+	unsigned short	flags;			
+	unsigned short	addr;			//从设备的地址
+	void		*platform_data;		//可以用于指向设备资源
+	struct dev_archdata	*archdata;
+	struct device_node *of_node;
+	int		irq;			//代表外部中断号
+};
+
+
+注册资源:
+
+i2c_register_board_info(
+	int busnum,	//i2c控制器的编号
+	struct i2c_board_info const *info, //从设备的资源对象 
+	unsigned len	//对象大小
+);
+
+=================================================================
+
+struct i2c_driver {
+	/* Standard driver model interfaces */
+	int (*probe)(struct i2c_client *, const struct i2c_device_id *);
+	int (*remove)(struct i2c_client *);
+
+	/* driver model interfaces that don't relate to enumeration  */
+	void (*shutdown)(struct i2c_client *);
+	int (*suspend)(struct i2c_client *, pm_message_t mesg);
+	int (*resume)(struct i2c_client *);
+	struct device_driver driver;
+
+};
+
+i2c_add_driver(struct i2c_driver *driver);

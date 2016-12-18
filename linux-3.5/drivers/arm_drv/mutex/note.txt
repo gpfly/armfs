@@ -1,0 +1,20 @@
+
+互斥量（互斥锁）：
+
+struct mutex;
+
+实例化锁:
+
+struct mutex mutex;
+
+mutex_init(&mutex);
+
+加锁：
+
+mutex_lock(&mutex);
+mutex_trylock(&mutex);
+
+
+解锁：
+
+mutex_unlock(&mutex);

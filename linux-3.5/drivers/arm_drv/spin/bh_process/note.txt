@@ -1,0 +1,24 @@
+
+自旋锁(非睡眠锁):
+
+自旋锁对应的结构体类型:
+
+spinlock_t;
+
+定义自旋锁并初始化：
+
+spinlock_t spin;
+spin_lock_init(&spin); 
+
+加锁/解锁:
+
+spin_lock(&spin);
+spin_trylock(&spin);
+spin_unlock(&spin);
+
+spin_lock_irqsave();
+spin_unlock_irqrestore();
+
+spin_lock_bh();
+spin_unlock_bh();
+

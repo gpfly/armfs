@@ -1,0 +1,85 @@
+
+menuconfig UPLOOKING_DRIVER
+	bool "class 160615 device driver"
+	---help---
+	 this class start to learn kernel driver at 9-18
+
+if UPLOOKING_DRIVER
+
+source "drivers/arm_drv/wdt/Kconfig"
+source "drivers/arm_drv/rtl8188C/Kconfig"
+
+menu "the keywords for type"
+
+config MILLET_LED
+	tristate 
+	prompt "4led driver on tiny4412"
+	---help---
+	 about 4 leds driver
+
+config MILLET_INFO
+	string "debug info prefix"
+	---help---
+	 just a string
+
+config MILLET_NUM
+	int "how many do you want to turn on led"
+	range 1 4
+	---help---
+	 just a number
+endmenu
+
+menu "the other keywords, select/choice/depends on"
+
+config MAIXIGUA
+	bool "buy xigua for select"
+	select BANGMANG
+	---help---
+	 nothing
+
+config BANGMANG 
+	bool "help xx to take xigua"
+	---help---
+	 nothing
+
+choice 
+	prompt "choose a driver for memory device"
+
+config KMEM_DRV1
+	tristate 
+	prompt "kernel memory device driver 1"
+	---help---
+	 nothing
+
+config KMEM_DRV2
+	tristate "kernel memory device driver 2"
+	---help---
+	 nothing
+
+endchoice
+
+config MYIIC 
+	tristate "IIC control driver"
+	default y
+	---help---
+	 nothing
+
+config MILLET_FT5206
+	tristate "ft5206 ctp driver"
+	depends on MYIIC
+	---help---
+	 nothing
+	
+
+endmenu
+
+endif
+
+#menuconfig/config
+#if/endif  
+#bool/tristate/hex/int/string
+#---help---/help
+#prompt/comment
+#choice/depends on/select
+#menu/endmenu
+#default/range

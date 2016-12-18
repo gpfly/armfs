@@ -1,0 +1,49 @@
+
+
+在内核中编写某个设备驱动时如果要用到中断
+利用内核的如下函数接口注册中断:
+
+int
+request_irq(
+	unsigned int irq,    //中断号
+	irq_handler_t handler, //中断处理函数
+	unsigned long flags,	//中断注册标记
+	const char *name, 	//中断的名字
+	void *dev		//中断处理函数的点心
+);
+
+@irq
+
+	1> 对于内部中断号
+
+		arch/arm/mach-exynos/include/mach/irqs.h
+
+	2> 对于外部中断对应的中断号的获取
+
+		a. IRQ_EINT(eint);	
+		b. 在知道gpio编号的情况下，可以通过gpio的编号
+		   得到对应注册的中断号
+
+			gpio_to_irq(gpionum); //通过gpio编号返回中断号
+@handler
+
+typedef irqreturn_t (*irq_handler_t)(int, void *);
+
+中断处理函数的形参：
+	第一个：发生中断的中断号
+	第二个：注册中断时为其准备的点心
+
+中断处理函数返回值:
+
+	IRQ_NONE  //中断处理失败
+	IRQ_HANDLED //中断成功处理
+
+@flags:
+
+#define IRQF_TRIGGER_RISING	0x00000001
+#define IRQF_TRIGGER_FALLING	0x00000002
+#define IRQF_TRIGGER_HIGH	0x00000004
+#define IRQF_TRIGGER_LOW	0x00000008
+#define IRQF_SHARED		0x00000080
+
+@dev		//中断发生后，由内核调用处理函数时传给处理函数的第二实参

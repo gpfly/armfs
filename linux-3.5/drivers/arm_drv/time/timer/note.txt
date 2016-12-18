@@ -1,0 +1,83 @@
+
+
+内核定时器:
+
+#include <linux/time.h>
+
+一个定时器对应如下类型的一个对象:
+
+struct timer_list {
+	struct list_head entry;
+	unsigned long expires;   //定时的未来时间点, 相对于当前的jiffies
+	struct tvec_base *base;
+
+	void (*function)(unsigned long); //定时到后由内核调用的处理函数
+	unsigned long data;	//定时处理函数的点心
+
+	int slack;
+
+#ifdef CONFIG_TIMER_STATS
+	int start_pid;
+	void *start_site;
+	char start_comm[16];
+#endif
+#ifdef CONFIG_LOCKDEP
+	struct lockdep_map lockdep_map;
+#endif
+};
+
+1. 实例化一个定时器
+
+	a. 
+		struct timer_list timer;
+
+		init_timer(&timer);
+		timer.expires 	= jiffies + xx*HZ;
+		timer.function 	= do_timer;
+		timer.data	= &data;
+
+	b.  
+		struct timer_list timer;
+		setup_timer(&timer, do_timer, (unsigned long)&data);
+		timer.expires	= jiffies + xx*HZ;
+
+
+	c. 	
+
+		DEFINE_TIMER(timer, do_timer, jiffies+xx*HZ, (unsigned long)&data)
+
+
+2. 向内核注册并启动顶时器
+
+void add_timer(struct timer_list *timer)
+
+
+	//add_timer(&timer);
+
+
+3. 如果需要实现周期性定时，那么需要在定时处理函数中调用
+
+	//mod_timer(&timer, jiffies + xx*HZ);
+
+int mod_timer(struct timer_list *timer, unsigned long expires)
+
+4. 驱动模块的出口或希望移除内核定时器的地方调用如下：
+
+	del_timer(&timer);
+
+	or 
+
+	del_timer_sync(&timer);
+
+
+
+
+
+
+
+
+
+
+
+
+
